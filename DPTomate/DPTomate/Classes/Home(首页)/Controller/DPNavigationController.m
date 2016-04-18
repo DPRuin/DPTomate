@@ -24,6 +24,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ *  设置电量条样式
+ */
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return UIStatusBarStyleLightContent;
+//}
+
 /*
 #pragma mark - Navigation
 

@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3533D6601CC361FD004566B7 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3533D65F1CC361FD004566B7 /* UIView+AutoLayout.m */; };
+		3533D6621CC49631004566B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3533D6641CC49631004566B7 /* Home.storyboard */; };
+		3533D66D1CC498A2004566B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3533D66F1CC498A2004566B7 /* InfoPlist.strings */; };
+		3533D6721CC498DC004566B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3533D6741CC498DC004566B7 /* Localizable.strings */; };
 		35758EB51CB4AD4C00F2B54B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35758EB41CB4AD4C00F2B54B /* main.m */; };
 		35758EC01CB4AD4C00F2B54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35758EBF1CB4AD4C00F2B54B /* Assets.xcassets */; };
 		35758EC31CB4AD4C00F2B54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35758EC11CB4AD4C00F2B54B /* LaunchScreen.storyboard */; };
 		3580CCC01CBB37DB00524F4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCBF1CBB37DB00524F4E /* AppDelegate.m */; };
-		3580CCC61CBB38E700524F4E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3580CCC51CBB38E700524F4E /* Home.storyboard */; };
 		3580CCCF1CBB3F3600524F4E /* DPFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCCE1CBB3F3600524F4E /* DPFocusViewController.m */; };
 		3580CCD21CBB3F4700524F4E /* DPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCD11CBB3F4700524F4E /* DPSettingsViewController.m */; };
 		3580CCD51CBB3F7A00524F4E /* DPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCD41CBB3F7A00524F4E /* DPNavigationController.m */; };
+		3580CCDB1CBB474C00524F4E /* DPTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCDA1CBB474C00524F4E /* DPTimerView.m */; };
+		3580CCDE1CBB5B0200524F4E /* DPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCDD1CBB5B0200524F4E /* DPButton.m */; };
+		3580CCE11CBB648A00524F4E /* DPConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCE01CBB648A00524F4E /* DPConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3533D65E1CC361FD004566B7 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		3533D65F1CC361FD004566B7 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		3533D6611CC49585004566B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3533D6631CC49631004566B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		3533D6661CC49634004566B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Home.strings; sourceTree = "<group>"; };
+		3533D6681CC49635004566B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Home.strings"; sourceTree = "<group>"; };
+		3533D6701CC498A4004566B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3533D6711CC498A5004566B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3533D6751CC498E1004566B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3533D6761CC498E6004566B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		35758EB01CB4AD4C00F2B54B /* DPTomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DPTomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35758EB41CB4AD4C00F2B54B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35758EBF1CB4AD4C00F2B54B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,13 +41,19 @@
 		35758EC41CB4AD4C00F2B54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3580CCBE1CBB37DB00524F4E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3580CCBF1CBB37DB00524F4E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3580CCC51CBB38E700524F4E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3580CCCD1CBB3F3600524F4E /* DPFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPFocusViewController.h; sourceTree = "<group>"; };
 		3580CCCE1CBB3F3600524F4E /* DPFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPFocusViewController.m; sourceTree = "<group>"; };
 		3580CCD01CBB3F4700524F4E /* DPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSettingsViewController.h; sourceTree = "<group>"; };
 		3580CCD11CBB3F4700524F4E /* DPSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSettingsViewController.m; sourceTree = "<group>"; };
 		3580CCD31CBB3F7A00524F4E /* DPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPNavigationController.h; sourceTree = "<group>"; };
 		3580CCD41CBB3F7A00524F4E /* DPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPNavigationController.m; sourceTree = "<group>"; };
+		3580CCD91CBB474C00524F4E /* DPTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTimerView.h; sourceTree = "<group>"; };
+		3580CCDA1CBB474C00524F4E /* DPTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTimerView.m; sourceTree = "<group>"; };
+		3580CCDC1CBB5B0200524F4E /* DPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPButton.h; sourceTree = "<group>"; };
+		3580CCDD1CBB5B0200524F4E /* DPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPButton.m; sourceTree = "<group>"; };
+		3580CCDF1CBB648A00524F4E /* DPConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConst.h; sourceTree = "<group>"; };
+		3580CCE01CBB648A00524F4E /* DPConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPConst.m; sourceTree = "<group>"; };
+		3580CCE21CBB64B400524F4E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				35758EB41CB4AD4C00F2B54B /* main.m */,
+				3533D66F1CC498A2004566B7 /* InfoPlist.strings */,
+				3533D6741CC498DC004566B7 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -103,7 +127,7 @@
 		3580CCB71CBB37DB00524F4E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3580CCC51CBB38E700524F4E /* Home.storyboard */,
+				3533D6641CC49631004566B7 /* Home.storyboard */,
 				3580CCD31CBB3F7A00524F4E /* DPNavigationController.h */,
 				3580CCD41CBB3F7A00524F4E /* DPNavigationController.m */,
 				3580CCCD1CBB3F3600524F4E /* DPFocusViewController.h */,
@@ -124,6 +148,10 @@
 		3580CCB91CBB37DB00524F4E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3580CCD91CBB474C00524F4E /* DPTimerView.h */,
+				3580CCDA1CBB474C00524F4E /* DPTimerView.m */,
+				3580CCDC1CBB5B0200524F4E /* DPButton.h */,
+				3580CCDD1CBB5B0200524F4E /* DPButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +169,8 @@
 		3580CCBB1CBB37DB00524F4E /* Categarty */ = {
 			isa = PBXGroup;
 			children = (
+				3533D65E1CC361FD004566B7 /* UIView+AutoLayout.h */,
+				3533D65F1CC361FD004566B7 /* UIView+AutoLayout.m */,
 			);
 			path = Categarty;
 			sourceTree = "<group>";
@@ -157,6 +187,9 @@
 			children = (
 				3580CCBE1CBB37DB00524F4E /* AppDelegate.h */,
 				3580CCBF1CBB37DB00524F4E /* AppDelegate.m */,
+				3580CCDF1CBB648A00524F4E /* DPConst.h */,
+				3580CCE01CBB648A00524F4E /* DPConst.m */,
+				3580CCE21CBB64B400524F4E /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -204,6 +237,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 35758EA71CB4AD4C00F2B54B;
 			productRefGroup = 35758EB11CB4AD4C00F2B54B /* Products */;
@@ -220,9 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3580CCC61CBB38E700524F4E /* Home.storyboard in Resources */,
+				3533D6621CC49631004566B7 /* Home.storyboard in Resources */,
+				3533D6721CC498DC004566B7 /* Localizable.strings in Resources */,
 				35758EC31CB4AD4C00F2B54B /* LaunchScreen.storyboard in Resources */,
 				35758EC01CB4AD4C00F2B54B /* Assets.xcassets in Resources */,
+				3533D66D1CC498A2004566B7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,18 +272,51 @@
 				3580CCD51CBB3F7A00524F4E /* DPNavigationController.m in Sources */,
 				3580CCCF1CBB3F3600524F4E /* DPFocusViewController.m in Sources */,
 				3580CCD21CBB3F4700524F4E /* DPSettingsViewController.m in Sources */,
+				3580CCE11CBB648A00524F4E /* DPConst.m in Sources */,
 				35758EB51CB4AD4C00F2B54B /* main.m in Sources */,
+				3533D6601CC361FD004566B7 /* UIView+AutoLayout.m in Sources */,
 				3580CCC01CBB37DB00524F4E /* AppDelegate.m in Sources */,
+				3580CCDE1CBB5B0200524F4E /* DPButton.m in Sources */,
+				3580CCDB1CBB474C00524F4E /* DPTimerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3533D6641CC49631004566B7 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3533D6631CC49631004566B7 /* Base */,
+				3533D6661CC49634004566B7 /* en */,
+				3533D6681CC49635004566B7 /* zh-Hans */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		3533D66F1CC498A2004566B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3533D6701CC498A4004566B7 /* en */,
+				3533D6711CC498A5004566B7 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3533D6741CC498DC004566B7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3533D6751CC498E1004566B7 /* en */,
+				3533D6761CC498E6004566B7 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		35758EC11CB4AD4C00F2B54B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				35758EC21CB4AD4C00F2B54B /* Base */,
+				3533D6611CC49585004566B7 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -341,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = DPTomate/Classes/Main/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = DPTomate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate;
@@ -352,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = DPTomate/Classes/Main/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = DPTomate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate;
