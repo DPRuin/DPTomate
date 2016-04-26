@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmr-S4-yPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1082" y="309"/>
+            <point key="canvasLocation" x="-1089" y="349"/>
         </scene>
         <!--Focus View Controller-->
         <scene sceneID="k45-SG-IaE">
@@ -35,67 +35,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fm0-tv-On8" customClass="DPTimerView">
-                                <rect key="frame" x="20" y="64" width="560" height="360"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="72" width="560" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="3zi-08-E2K"/>
+                                    <constraint firstAttribute="height" constant="400" id="3zi-08-E2K"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-YN-l56" customClass="DPButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-YN-l56" customClass="DPButton">
                                 <rect key="frame" x="260" y="500" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="T8R-1p-voY"/>
                                     <constraint firstAttribute="width" constant="80" id="YQv-Xr-GMp"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="拖延">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="22" name="STHeitiSC-Light"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="22"/>
+                                <state key="normal" title="拖延">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startProcrastination:" destination="bex-w6-UOn" eventType="touchUpInside" id="5oK-gW-NjY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-lg-Ohz" customClass="DPButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-lg-Ohz" customClass="DPButton">
                                 <rect key="frame" x="380" y="480" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="UuC-Il-xYo"/>
                                     <constraint firstAttribute="width" constant="80" id="aZl-rx-Z3Y"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="休息">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="22" name="STHeitiSC-Light"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="22"/>
+                                <state key="normal" title="休息">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startBreak:" destination="bex-w6-UOn" eventType="touchUpInside" id="ImB-dG-dlk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7if-g5-igw" customClass="DPButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7if-g5-igw" customClass="DPButton">
                                 <rect key="frame" x="140" y="480" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="BM0-9X-QJH"/>
                                     <constraint firstAttribute="width" constant="80" id="aIk-Tn-HSP"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="工作">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="22" name="STHeitiSC-Light"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="22"/>
+                                <state key="normal" title="工作">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startWork:" destination="bex-w6-UOn" eventType="touchUpInside" id="kmT-hH-mll"/>
@@ -106,17 +88,25 @@
                         <constraints>
                             <constraint firstItem="pCg-xE-e4L" firstAttribute="top" secondItem="QSK-YN-l56" secondAttribute="bottom" constant="20" id="Blg-hT-Mtn"/>
                             <constraint firstItem="Fm0-tv-On8" firstAttribute="leading" secondItem="sF2-SB-Mcy" secondAttribute="leadingMargin" id="KMJ-Ut-mIM"/>
-                            <constraint firstItem="Fm0-tv-On8" firstAttribute="top" secondItem="aIL-lR-ad8" secondAttribute="bottom" id="Nlf-3u-c2d"/>
+                            <constraint firstItem="Fm0-tv-On8" firstAttribute="top" secondItem="aIL-lR-ad8" secondAttribute="bottom" constant="8" id="Nlf-3u-c2d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fm0-tv-On8" secondAttribute="trailing" id="PYb-YO-UcU"/>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="top" secondItem="3gc-lg-Ohz" secondAttribute="bottom" constant="-60" id="RGs-M1-Gae"/>
                             <constraint firstItem="7if-g5-igw" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" constant="-120" id="c7C-BP-Omn"/>
                             <constraint firstItem="pCg-xE-e4L" firstAttribute="top" secondItem="7if-g5-igw" secondAttribute="bottom" constant="40" id="fXV-Nc-XDi"/>
                             <constraint firstItem="3gc-lg-Ohz" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" constant="120" id="jAp-Hb-6sH"/>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" id="pSx-pX-884"/>
+                            <constraint firstItem="3gc-lg-Ohz" firstAttribute="top" secondItem="Fm0-tv-On8" secondAttribute="bottom" constant="8" id="xDB-uj-QU5"/>
+                            <constraint firstItem="7if-g5-igw" firstAttribute="top" secondItem="Fm0-tv-On8" secondAttribute="bottom" constant="8" id="zbE-zl-arS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Blg-hT-Mtn"/>
+                                <exclude reference="fXV-Nc-XDi"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="H0Y-OX-0zD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kAs-hj-d5s">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="kAs-hj-d5s">
                             <connections>
                                 <segue destination="Hjj-eL-08M" kind="show" id="Zo6-sz-qoo"/>
                             </connections>
@@ -144,12 +134,57 @@
                     <view key="view" contentMode="scaleToFill" id="wvH-aU-UzZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-4c-HO5" customClass="DPInputHostView">
+                                <rect key="frame" x="20" y="72" width="560" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NHx-d2-WR0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTH-Sk-97A" customClass="DPInputHostView">
+                                <rect key="frame" x="20" y="124" width="560" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aox-65-JV7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="fQt-9t-QLE"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-5F-Z1D">
+                                <rect key="frame" x="20" y="184" width="560" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="g3L-7V-84C"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BxU-5F-Z1D" secondAttribute="trailing" id="7PE-iH-opN"/>
+                            <constraint firstItem="BxU-5F-Z1D" firstAttribute="leading" secondItem="wvH-aU-UzZ" secondAttribute="leadingMargin" id="923-66-dbp"/>
+                            <constraint firstItem="ew5-4c-HO5" firstAttribute="leading" secondItem="wvH-aU-UzZ" secondAttribute="leadingMargin" id="Fw1-Oo-AKU"/>
+                            <constraint firstItem="ew5-4c-HO5" firstAttribute="top" secondItem="iEu-4G-aqK" secondAttribute="bottom" constant="8" id="Hnc-pf-60b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ew5-4c-HO5" secondAttribute="trailing" id="N6R-8d-2FN"/>
+                            <constraint firstItem="fTH-Sk-97A" firstAttribute="trailing" secondItem="wvH-aU-UzZ" secondAttribute="trailingMargin" id="Qhf-Nm-Q3a"/>
+                            <constraint firstItem="fTH-Sk-97A" firstAttribute="top" secondItem="ew5-4c-HO5" secondAttribute="bottom" constant="8" id="VfY-h2-Mdy"/>
+                            <constraint firstItem="BxU-5F-Z1D" firstAttribute="top" secondItem="fTH-Sk-97A" secondAttribute="bottom" constant="16" id="bvi-LA-IVv"/>
+                            <constraint firstItem="fTH-Sk-97A" firstAttribute="leading" secondItem="wvH-aU-UzZ" secondAttribute="leadingMargin" id="e7n-Sw-fEh"/>
+                            <constraint firstItem="ew5-4c-HO5" firstAttribute="top" secondItem="wvH-aU-UzZ" secondAttribute="topMargin" constant="8" id="o3R-5X-r09"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="o3R-5X-r09"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="breakInputHostView" destination="fTH-Sk-97A" id="i7s-t7-com"/>
+                        <outlet property="pickerView" destination="BxU-5F-Z1D" id="taq-EA-qPa"/>
+                        <outlet property="workInputHostView" destination="ew5-4c-HO5" id="YPW-Pv-zBy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzu-wO-wfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="309"/>
+            <point key="canvasLocation" x="402" y="349"/>
         </scene>
     </scenes>
 </document>

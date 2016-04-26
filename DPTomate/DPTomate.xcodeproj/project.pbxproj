@@ -21,6 +21,7 @@
 		3580CCDB1CBB474C00524F4E /* DPTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCDA1CBB474C00524F4E /* DPTimerView.m */; };
 		3580CCDE1CBB5B0200524F4E /* DPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCDD1CBB5B0200524F4E /* DPButton.m */; };
 		3580CCE11CBB648A00524F4E /* DPConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCE01CBB648A00524F4E /* DPConst.m */; };
+		35C4F75D1CC71FB400EF6B3B /* DPInputHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		3580CCDF1CBB648A00524F4E /* DPConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConst.h; sourceTree = "<group>"; };
 		3580CCE01CBB648A00524F4E /* DPConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPConst.m; sourceTree = "<group>"; };
 		3580CCE21CBB64B400524F4E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		35C4F75B1CC71FB400EF6B3B /* DPInputHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPInputHostView.h; sourceTree = "<group>"; };
+		35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPInputHostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				3580CCDA1CBB474C00524F4E /* DPTimerView.m */,
 				3580CCDC1CBB5B0200524F4E /* DPButton.h */,
 				3580CCDD1CBB5B0200524F4E /* DPButton.m */,
+				35C4F75B1CC71FB400EF6B3B /* DPInputHostView.h */,
+				35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				3580CCD21CBB3F4700524F4E /* DPSettingsViewController.m in Sources */,
 				3580CCE11CBB648A00524F4E /* DPConst.m in Sources */,
 				35758EB51CB4AD4C00F2B54B /* main.m in Sources */,
+				35C4F75D1CC71FB400EF6B3B /* DPInputHostView.m in Sources */,
 				3533D6601CC361FD004566B7 /* UIView+AutoLayout.m in Sources */,
 				3580CCC01CBB37DB00524F4E /* AppDelegate.m in Sources */,
 				3580CCDE1CBB5B0200524F4E /* DPButton.m in Sources */,
