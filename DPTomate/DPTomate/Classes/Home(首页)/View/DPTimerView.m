@@ -10,6 +10,10 @@
 #import "UIView+AutoLayout.h"
 
 @interface DPTimerView ()
+
+@property (nonatomic, assign) CGFloat durationInSeconds; // CGFloat
+@property (nonatomic, assign) CGFloat maxValue; // CGFloat
+
 @property (nonatomic, getter=isShowRemaining) BOOL showRemaining;
 
 /** 时间图层 */
@@ -23,37 +27,32 @@
 
 @implementation DPTimerView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (void)awakeFromNib
 {
-    if (self = [super initWithFrame:frame]) {
-        self.durationInSeconds = 0;
-        self.maxValue = 60;
-        self.showRemaining = YES;
-        self.timerColor = DPRGBColor(111, 193, 248);
-        
-        // 时间图层
-        CAShapeLayer *timerShapeLayer = [[CAShapeLayer alloc] init];
-        self.timerShapeLayer = timerShapeLayer;
-        [self.layer addSublayer:timerShapeLayer];
-        
-        // 秒图层
-        CAShapeLayer *secondsShapeLayer = [[CAShapeLayer alloc] init];
-        self.secondsShapeLayer = secondsShapeLayer;
-        [self.layer addSublayer:secondsShapeLayer];
-        
-        // 时间label
-        UILabel *timeLabel = [[UILabel alloc] init];
-        self.timeLabel = timeLabel;
-        [self addSubview:timeLabel];
-        timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
-        timeLabel.textAlignment = NSTextAlignmentCenter;
-        timeLabel.textColor = self.timerColor;
-        
-        self.backgroundColor = [UIColor clearColor];
-        
-    }
-    return self;
+    self.durationInSeconds = 0;
+    self.maxValue = 60;
+    self.showRemaining = YES;
+    self.timerColor = DPBlueColor;
+    
+    // 时间图层
+    CAShapeLayer *timerShapeLayer = [[CAShapeLayer alloc] init];
+    self.timerShapeLayer = timerShapeLayer;
+    [self.layer addSublayer:timerShapeLayer];
+    
+    // 秒图层
+    CAShapeLayer *secondsShapeLayer = [[CAShapeLayer alloc] init];
+    self.secondsShapeLayer = secondsShapeLayer;
+    [self.layer addSublayer:secondsShapeLayer];
+    
+    // 时间label
+    UILabel *timeLabel = [[UILabel alloc] init];
+    self.timeLabel = timeLabel;
+    [self addSubview:timeLabel];
+    timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
+    timeLabel.textAlignment = NSTextAlignmentCenter;
+    timeLabel.textColor = self.timerColor;
+    
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -88,9 +87,9 @@
     // 画秒
     CGFloat secondsPercentage;
     if (self.isShowRemaining) {
-        secondsPercentage = (self.durationInSeconds - 1) % 60;
+        secondsPercentage = ((int)self.durationInSeconds - 1) % 60;
     } else {
-        secondsPercentage = 60 - (self.durationInSeconds - 1) % 60;
+        secondsPercentage = 60 - ((int)self.durationInSeconds - 1) % 60;
     }
     
     UIBezierPath *secondsRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius - 4 startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
@@ -101,6 +100,7 @@
     self.secondsShapeLayer.path = secondsRingPath.CGPath;
     
     // 画外圆
+    [self.timerColor set];
     UIBezierPath *fullRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius + 4 startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
     fullRingPath.lineWidth = 1.0;
     [fullRingPath stroke];
@@ -110,8 +110,8 @@
         self.durationInSeconds = self.maxValue - self.durationInSeconds;
     }
     
-    int seconds = self.durationInSeconds % 60;
-    int minutes = self.durationInSeconds / 60;
+    int seconds = (int)self.durationInSeconds % 60;
+    int minutes = (int)self.durationInSeconds / 60;
     NSString *labeText = [NSString stringWithFormat:@"%d : %d", minutes, seconds];
     self.timeLabel.text = labeText;
     [self.timeLabel setNeedsLayout];
@@ -129,6 +129,13 @@
     [super layoutSubviews];
     [self.timeLabel autoCenterInSuperview];
     
+}
+
+- (void)setDuration:(CGFloat)duration maxValue:(CGFloat)maxValue
+{
+    self.durationInSeconds = duration;
+    self.maxValue = maxValue;
+    [self setNeedsDisplay];
 }
 
 @end

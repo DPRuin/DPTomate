@@ -13,6 +13,7 @@
 - (void)awakeFromNib
 {
     [self setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self setTitleColor:DPOrangeColor forState:UIControlStateSelected];
     self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:22];
 }
 

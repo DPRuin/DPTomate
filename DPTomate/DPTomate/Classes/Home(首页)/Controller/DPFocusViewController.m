@@ -11,9 +11,6 @@
 #import "DPButton.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-#define DPOrangeColor DPRGBColor(212, 167, 42)
-#define DPBackgroundColor DPRGBColor(41, 42, 55)
-
 @interface DPFocusViewController ()
 
 /** 定时器 */
@@ -28,6 +25,7 @@
 
 /** 倒计时钟 */
 @property (weak, nonatomic) IBOutlet DPTimerView *timerView;
+
 /** 工作按钮 */
 @property (weak, nonatomic) IBOutlet DPButton *workButton;
 /** 休息按钮 */
@@ -44,6 +42,8 @@
     [super viewDidLoad];
     self.currentType = TimerTypeIdle;
     self.view.backgroundColor = DPBackgroundColor;
+    // 导航栏不透明
+    self.navigationController.navigationBar.translucent = NO;
     
 }
 
@@ -55,6 +55,7 @@
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark - 按钮点击了
 /**
  *  开始工作
  */
@@ -62,9 +63,9 @@
     if (self.currentType == TimerTypeWork) {
         // 提示
         [self showAlert];
-        [self startTimerWithType:TimerTypeWork];
         return;
     }
+    [self startTimerWithType:TimerTypeWork];
 }
 
 /**
@@ -74,9 +75,9 @@
     if (self.currentType == TimerTypeBreak) {
         // 提示
         [self showAlert];
-        [self startTimerWithType:TimerTypeBreak];
         return;
     }
+    [self startTimerWithType:TimerTypeBreak];
 }
 
 /**
@@ -86,9 +87,9 @@
     if (self.currentType == TimerTypeProcrastination) {
         // 提示
         [self showAlert];
-        [self startTimerWithType:TimerTypeProcrastination];
         return;
     }
+    [self startTimerWithType:TimerTypeProcrastination];
 }
 
 /**
@@ -96,10 +97,7 @@
  */
 - (void)startTimerWithType:(TimerType)type
 {
-    self.timerView.durationInSeconds = 0;
-    self.timerView.maxValue = 1;
-    [self.timerView setNeedsDisplay];
-    
+    [self.timerView setDuration:0 maxValue:1.0];
     
     // 倒计多少秒
     NSInteger seconds;
@@ -145,14 +143,15 @@
 }
 
 /**
- *
+ *  更新timeLabel
  */
 - (void)updateTimeLabel:(NSTimer *)timer
 {
     CGFloat totalNumberOfSeconds;
-    CGFloat seconds = [timer.userInfo[@"timerType"] floatValue];
+    NSNumber *seconds = timer.userInfo[@"timerType"];
+    DPLog(@"-seconds-%@", seconds);
     if (seconds) {
-        totalNumberOfSeconds = seconds;
+        totalNumberOfSeconds = seconds.floatValue;
     } else {
         NSAssert(NO, @"错误：不应该来到这里");
         totalNumberOfSeconds = -1.0;
@@ -164,13 +163,13 @@
         if (timeInterval > -1) {
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
         }
-        self.timerView.durationInSeconds = 0;
-        self.timerView.maxValue = 1;
+        
+        [self.timerView setDuration:0 maxValue:1.0];
+        
         return;
     }
-    
-    self.timerView.durationInSeconds = timeInterval;
-    self.timerView.maxValue = totalNumberOfSeconds;
+
+    [self.timerView setDuration:timeInterval maxValue:totalNumberOfSeconds];
     
 }
 
@@ -272,7 +271,7 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *stopAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Stop", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         // 停止倒计时
-        
+        [self startTimerWithType:TimerTypeIdle];
     }];
     
     [alertVC addAction:cancelAction];

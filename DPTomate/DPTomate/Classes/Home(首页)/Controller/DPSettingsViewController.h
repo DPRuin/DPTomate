@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    SettingTimerTypeWork, // 工作
+    SettingTimerTypeBreak, // 休息
+} SettingTimerType;
+
 @interface DPSettingsViewController : UIViewController
 
 @end

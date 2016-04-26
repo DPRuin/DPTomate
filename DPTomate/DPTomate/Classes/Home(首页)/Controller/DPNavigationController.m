@@ -16,20 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.navigationBar.barTintColor = DPBackgroundColor;
+    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : DPBlueColor};
+    
 }
 
 /**
  *  设置电量条样式
  */
-//- (UIStatusBarStyle)preferredStatusBarStyle {
-//    return UIStatusBarStyleLightContent;
-//}
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 /*
 #pragma mark - Navigation

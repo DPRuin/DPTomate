@@ -20,8 +20,7 @@ typedef enum : NSUInteger {
 
 @interface DPTimerView : UIView
 
-@property (nonatomic, assign) int durationInSeconds; // CGFloat
-@property (nonatomic, assign) int maxValue; // CGFloat
 @property (nonatomic, strong) UIColor *timerColor;
 
+- (void)setDuration:(CGFloat)duration maxValue:(CGFloat)maxValue;
 @end

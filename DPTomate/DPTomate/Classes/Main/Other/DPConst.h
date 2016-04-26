@@ -13,3 +13,8 @@
 extern NSString *const TimerTypeWorkKey;
 extern NSString *const TimerTypeBreakKey;
 extern NSString *const TimerTypeProcrastinationKey;
+
+#define DPOrangeColor DPRGBColor(212, 167, 42)
+#define DPBackgroundColor DPRGBColor(41, 42, 55)
+#define DPTimerColor DPRGBColor(111, 193, 248)
+#define DPBlueColor DPRGBColor(63, 117, 255)
