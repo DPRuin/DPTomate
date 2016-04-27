@@ -21,8 +21,36 @@
 		3580CCDB1CBB474C00524F4E /* DPTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCDA1CBB474C00524F4E /* DPTimerView.m */; };
 		3580CCDE1CBB5B0200524F4E /* DPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCDD1CBB5B0200524F4E /* DPButton.m */; };
 		3580CCE11CBB648A00524F4E /* DPConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3580CCE01CBB648A00524F4E /* DPConst.m */; };
+		359738641CD03EBC0063CCC2 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359738631CD03EBC0063CCC2 /* NotificationCenter.framework */; };
+		359738681CD03EBC0063CCC2 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359738671CD03EBC0063CCC2 /* TodayViewController.m */; };
+		3597386B1CD03EBC0063CCC2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359738691CD03EBC0063CCC2 /* MainInterface.storyboard */; };
+		359738701CD03EBC0063CCC2 /* DPToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 359738611CD03EBC0063CCC2 /* DPToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		35C4F75D1CC71FB400EF6B3B /* DPInputHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3597386D1CD03EBC0063CCC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35758EA81CB4AD4C00F2B54B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 359738601CD03EBC0063CCC2;
+			remoteInfo = DPToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3597386F1CD03EBC0063CCC2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				359738701CD03EBC0063CCC2 /* DPToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3533D65E1CC361FD004566B7 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
@@ -55,6 +83,12 @@
 		3580CCDF1CBB648A00524F4E /* DPConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConst.h; sourceTree = "<group>"; };
 		3580CCE01CBB648A00524F4E /* DPConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPConst.m; sourceTree = "<group>"; };
 		3580CCE21CBB64B400524F4E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		359738611CD03EBC0063CCC2 /* DPToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DPToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		359738631CD03EBC0063CCC2 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		359738661CD03EBC0063CCC2 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		359738671CD03EBC0063CCC2 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		3597386A1CD03EBC0063CCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3597386C1CD03EBC0063CCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C4F75B1CC71FB400EF6B3B /* DPInputHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPInputHostView.h; sourceTree = "<group>"; };
 		35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPInputHostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3597385E1CD03EBC0063CCC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359738641CD03EBC0063CCC2 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				35758EB21CB4AD4C00F2B54B /* DPTomate */,
+				359738651CD03EBC0063CCC2 /* DPToday */,
+				359738621CD03EBC0063CCC2 /* Frameworks */,
 				35758EB11CB4AD4C00F2B54B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				35758EB01CB4AD4C00F2B54B /* DPTomate.app */,
+				359738611CD03EBC0063CCC2 /* DPToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +244,25 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		359738621CD03EBC0063CCC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				359738631CD03EBC0063CCC2 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		359738651CD03EBC0063CCC2 /* DPToday */ = {
+			isa = PBXGroup;
+			children = (
+				359738661CD03EBC0063CCC2 /* TodayViewController.h */,
+				359738671CD03EBC0063CCC2 /* TodayViewController.m */,
+				359738691CD03EBC0063CCC2 /* MainInterface.storyboard */,
+				3597386C1CD03EBC0063CCC2 /* Info.plist */,
+			);
+			path = DPToday;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,15 +273,34 @@
 				35758EAC1CB4AD4C00F2B54B /* Sources */,
 				35758EAD1CB4AD4C00F2B54B /* Frameworks */,
 				35758EAE1CB4AD4C00F2B54B /* Resources */,
+				3597386F1CD03EBC0063CCC2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3597386E1CD03EBC0063CCC2 /* PBXTargetDependency */,
 			);
 			name = DPTomate;
 			productName = DPTomate;
 			productReference = 35758EB01CB4AD4C00F2B54B /* DPTomate.app */;
 			productType = "com.apple.product-type.application";
+		};
+		359738601CD03EBC0063CCC2 /* DPToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359738731CD03EBD0063CCC2 /* Build configuration list for PBXNativeTarget "DPToday" */;
+			buildPhases = (
+				3597385D1CD03EBC0063CCC2 /* Sources */,
+				3597385E1CD03EBC0063CCC2 /* Frameworks */,
+				3597385F1CD03EBC0063CCC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DPToday;
+			productName = DPToday;
+			productReference = 359738611CD03EBC0063CCC2 /* DPToday.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -230,6 +313,10 @@
 				ORGANIZATIONNAME = DPRuin;
 				TargetAttributes = {
 					35758EAF1CB4AD4C00F2B54B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = WVDCG7BX62;
+					};
+					359738601CD03EBC0063CCC2 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WVDCG7BX62;
 					};
@@ -250,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				35758EAF1CB4AD4C00F2B54B /* DPTomate */,
+				359738601CD03EBC0063CCC2 /* DPToday */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +352,14 @@
 				35758EC31CB4AD4C00F2B54B /* LaunchScreen.storyboard in Resources */,
 				35758EC01CB4AD4C00F2B54B /* Assets.xcassets in Resources */,
 				3533D66D1CC498A2004566B7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3597385F1CD03EBC0063CCC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3597386B1CD03EBC0063CCC2 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +383,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3597385D1CD03EBC0063CCC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359738681CD03EBC0063CCC2 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3597386E1CD03EBC0063CCC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 359738601CD03EBC0063CCC2 /* DPToday */;
+			targetProxy = 3597386D1CD03EBC0063CCC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3533D6641CC49631004566B7 /* Home.storyboard */ = {
@@ -325,6 +437,14 @@
 				3533D6611CC49585004566B7 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		359738691CD03EBC0063CCC2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3597386A1CD03EBC0063CCC2 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,6 +556,28 @@
 			};
 			name = Release;
 		};
+		359738711CD03EBD0063CCC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DPToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.DPToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		359738721CD03EBD0063CCC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DPToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.DPToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,6 +598,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		359738731CD03EBD0063CCC2 /* Build configuration list for PBXNativeTarget "DPToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359738711CD03EBD0063CCC2 /* Debug */,
+				359738721CD03EBD0063CCC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

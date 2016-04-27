@@ -17,7 +17,9 @@
 @property (nonatomic, strong) NSTimer *timer;
 
 @property (nonatomic, strong) NSDate *endDate;
+/** 本地通知 */
 @property (nonatomic, strong) UILocalNotification *localNotification;
+
 /** 倒计时类型 */
 @property (nonatomic, assign) TimerType currentType;
 
@@ -45,6 +47,11 @@
     // 导航栏不透明
     self.navigationController.navigationBar.translucent = NO;
     
+    if (self.timer == nil) {
+        [self.timerView setDuration:0 maxValue:1];
+    }
+    NSInteger duration = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeWorkKey];
+    DPLog(@"-duration- %ld", duration);
 }
 
 /**
@@ -101,28 +108,39 @@
     
     // 倒计多少秒
     NSInteger seconds;
+    // 用于本地通知
+    NSString *typeName;
+    
     switch (type) {
         case TimerTypeWork: {
             self.currentType = TimerTypeWork;
             seconds = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeWorkKey];
+            typeName = NSLocalizedString(@"Work", nil);
             break;
         }
             
         case TimerTypeBreak: {
             self.currentType = TimerTypeBreak;
             seconds = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeBreakKey];
+            typeName = NSLocalizedString(@"Break", nil);
             break;
         }
             
         case TimerTypeProcrastination: {
             self.currentType = TimerTypeProcrastination;
-            
+            seconds = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeProcrastinationKey];
+            typeName = NSLocalizedString(@"Procrastination", nil);
             break;
         }
             
         default: {
             self.currentType = TimerTypeIdle;
+            seconds = 0;
             [self resetTimer];
+            
+            // 取消通知
+            [[UIApplication sharedApplication] cancelAllLocalNotifications];
+            
             break;
         }
     }
@@ -140,6 +158,18 @@
     [self.timer invalidate];
     NSNumber *secondsNumber = [NSNumber numberWithInteger:seconds];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeLabel:) userInfo:@{@"timerType" : secondsNumber} repeats:YES];
+    
+    // 本地通知
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    self.localNotification = [[UILocalNotification alloc] init];
+    self.localNotification.fireDate = self.endDate;
+    NSString *alertBody = NSLocalizedString(@"time is up!", nil);
+    self.localNotification.alertBody = [NSString stringWithFormat:@"%@", typeName];
+    self.localNotification.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
+    
+    
+    
 }
 
 /**
@@ -149,7 +179,7 @@
 {
     CGFloat totalNumberOfSeconds;
     NSNumber *seconds = timer.userInfo[@"timerType"];
-    DPLog(@"-seconds-%@", seconds);
+    // DPLog(@"-seconds-%@", seconds);
     if (seconds) {
         totalNumberOfSeconds = seconds.floatValue;
     } else {

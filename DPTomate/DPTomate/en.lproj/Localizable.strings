@@ -5,6 +5,8 @@
   Created by 土老帽 on 16/4/18.
   Copyright © 2016年 DPRuin. All rights reserved.
 */
+
+// home
 "Do you want to stop this "="Do you want to stop this ";
 "work timer?"="work timer?";
 "break timer?"="break timer?";
@@ -13,6 +15,13 @@
 "Cancel"="Cancel";
 "Stop"="Stop";
 
+// 设置界面
 "Setting"="Setting";
 "Work Duration"="Work Duration";
 "Break Duration"="Break Duration";
+
+// 通知
+"Procrastination"="Procrastination";
+"Work"="Work";
+"Break"="Break";
+"time is up!"="time is up!";
