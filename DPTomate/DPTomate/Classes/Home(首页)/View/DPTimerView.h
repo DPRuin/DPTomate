@@ -22,5 +22,10 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, strong) UIColor *timerColor;
 
+/**
+ *  设置持续时间
+ *  @Param duration 剩余时间 秒
+ *  @Param maxValue 总的时间 秒
+ */
 - (void)setDuration:(CGFloat)duration maxValue:(CGFloat)maxValue;
 @end

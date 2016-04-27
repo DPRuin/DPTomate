@@ -65,6 +65,11 @@
     }
 }
 
+/**
+ *  更新label中文字
+ *  @param name 名称
+ *  @param durationStr 时间
+ */
 - (void)setName:(NSString *)name duration:(NSString *)durationStr
 {
     self.nameLabel.text = name;
@@ -73,6 +78,10 @@
     [self.durationLabel setNeedsDisplay];
 }
 
+/**
+ *  更新label中文字
+ *  @param durationStr 时间
+ */
 - (void)setDurationStr:(NSString *)durationStr
 {
     self.durationLabel.text = durationStr;

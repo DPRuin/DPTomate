@@ -16,7 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 应用的默认设置
+    [self registerDefaultUserDefaults];
+    
     return YES;
 }
 
@@ -41,5 +43,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+/**
+ * 应用的默认设置
+ */
+- (void)registerDefaultUserDefaults
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:1501 forKey:TimerTypeWorkKey];
+    [[NSUserDefaults standardUserDefaults] setInteger:301 forKey:TimerTypeBreakKey];
+    [[NSUserDefaults standardUserDefaults] setInteger:601 forKey:TimerTypeProcrastinationKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // 注册通知
+    UIUserNotificationType notificationType = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+    UIUserNotificationSettings *notificaitonSettings = [UIUserNotificationSettings settingsForTypes:notificationType categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificaitonSettings];
+}
+
+
 
 @end

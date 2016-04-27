@@ -112,7 +112,7 @@
     
     int seconds = (int)self.durationInSeconds % 60;
     int minutes = (int)self.durationInSeconds / 60;
-    NSString *labeText = [NSString stringWithFormat:@"%d : %d", minutes, seconds];
+    NSString *labeText = [NSString stringWithFormat:@"%02d : %02d", minutes, seconds];
     self.timeLabel.text = labeText;
     [self.timeLabel setNeedsLayout];
     
@@ -131,6 +131,11 @@
     
 }
 
+/**
+ *  设置持续时间
+ *  @Param duration 剩余时间 秒
+ *  @Param maxValue 总的时间 秒
+ */
 - (void)setDuration:(CGFloat)duration maxValue:(CGFloat)maxValue
 {
     self.durationInSeconds = duration;
