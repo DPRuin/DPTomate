@@ -8,6 +8,7 @@
 
 #import "DPTimerView.h"
 #import "UIView+AutoLayout.h"
+#import "DPConst.h"
 
 @interface DPTimerView ()
 
@@ -27,7 +28,23 @@
 
 @implementation DPTimerView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        [self setupTimerView];
+    }
+    return self;
+}
+
 - (void)awakeFromNib
+{
+    [self setupTimerView];
+}
+
+/**
+ *  初始化timerView
+ */
+- (void)setupTimerView
 {
     self.durationInSeconds = 0;
     self.maxValue = 60;
@@ -52,7 +69,6 @@
     timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
     timeLabel.textAlignment = NSTextAlignmentCenter;
     timeLabel.textColor = self.timerColor;
-    
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -141,6 +157,15 @@
     self.durationInSeconds = duration;
     self.maxValue = maxValue;
     [self setNeedsDisplay];
+}
+
+/**
+ *  设置timeLabel字体大小
+ */
+- (void)setTimeLabelFont:(UIFont *)font
+{
+    self.timeLabel.font = font;
+    [self.timeLabel setNeedsDisplay];
 }
 
 @end

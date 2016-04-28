@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-
 typedef enum : NSUInteger {
     TimerTypeWork, // 工作
     TimerTypeBreak, // 休息
@@ -28,4 +26,9 @@ typedef enum : NSUInteger {
  *  @Param maxValue 总的时间 秒
  */
 - (void)setDuration:(CGFloat)duration maxValue:(CGFloat)maxValue;
+
+/**
+ *  设置timeLabel字体大小
+ */
+- (void)setTimeLabelFont:(UIFont *)font;
 @end

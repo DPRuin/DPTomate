@@ -164,7 +164,7 @@
     self.localNotification = [[UILocalNotification alloc] init];
     self.localNotification.fireDate = self.endDate;
     NSString *alertBody = NSLocalizedString(@"time is up!", nil);
-    self.localNotification.alertBody = [NSString stringWithFormat:@"%@", typeName];
+    self.localNotification.alertBody = [NSString stringWithFormat:@"%@%@", alertBody, typeName];
     self.localNotification.soundName = UILocalNotificationDefaultSoundName;
     [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
     
