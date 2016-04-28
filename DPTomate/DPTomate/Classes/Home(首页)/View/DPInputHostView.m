@@ -7,7 +7,7 @@
 //
 
 #import "DPInputHostView.h"
-#import "UIView+AutoLayout.h"
+#import "PureLayout.h"
 
 @interface DPInputHostView ()
 @property (nonatomic, weak) UILabel *nameLabel;

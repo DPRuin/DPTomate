@@ -106,6 +106,8 @@
 		3597387E1CD190910063CCC2 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
 		3597387F1CD190910063CCC2 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		359738801CD190910063CCC2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		359738C11CD1DE0E0063CCC2 /* DPTomate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DPTomate.entitlements; sourceTree = "<group>"; };
+		359738C21CD1E7170063CCC2 /* DPToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DPToday.entitlements; sourceTree = "<group>"; };
 		35C4F75B1CC71FB400EF6B3B /* DPInputHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPInputHostView.h; sourceTree = "<group>"; };
 		35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPInputHostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 		35758EB21CB4AD4C00F2B54B /* DPTomate */ = {
 			isa = PBXGroup;
 			children = (
+				359738C11CD1DE0E0063CCC2 /* DPTomate.entitlements */,
 				3580CCB51CBB37DB00524F4E /* Classes */,
 				35758EBF1CB4AD4C00F2B54B /* Assets.xcassets */,
 				35758EC11CB4AD4C00F2B54B /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 		359738651CD03EBC0063CCC2 /* DPToday */ = {
 			isa = PBXGroup;
 			children = (
+				359738C21CD1E7170063CCC2 /* DPToday.entitlements */,
 				359738661CD03EBC0063CCC2 /* TodayViewController.h */,
 				359738671CD03EBC0063CCC2 /* TodayViewController.m */,
 				359738691CD03EBC0063CCC2 /* MainInterface.storyboard */,
@@ -350,10 +354,20 @@
 					35758EAF1CB4AD4C00F2B54B = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WVDCG7BX62;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					359738601CD03EBC0063CCC2 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WVDCG7BX62;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -578,11 +592,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DPTomate/DPTomate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = DPTomate/Classes/Main/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = DPTomate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -590,21 +608,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DPTomate/DPTomate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = DPTomate/Classes/Main/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = DPTomate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		359738711CD03EBD0063CCC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DPToday/DPToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DPToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.DPToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -612,10 +638,14 @@
 		359738721CD03EBD0063CCC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DPToday/DPToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DPToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.DPToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

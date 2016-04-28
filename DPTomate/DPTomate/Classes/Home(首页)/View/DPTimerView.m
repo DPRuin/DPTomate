@@ -7,7 +7,7 @@
 //
 
 #import "DPTimerView.h"
-#import "UIView+AutoLayout.h"
+#import "PureLayout.h"
 #import "DPConst.h"
 
 @interface DPTimerView ()
@@ -50,6 +50,7 @@
     self.maxValue = 60;
     self.showRemaining = YES;
     self.timerColor = DPBlueColor;
+    self.backgroundColor = [UIColor clearColor];
     
     // 时间图层
     CAShapeLayer *timerShapeLayer = [[CAShapeLayer alloc] init];

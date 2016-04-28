@@ -151,8 +151,18 @@
     // 按钮状态设置
     [self setUIModeForTimerType:type];
     
+    // WidgeExtention 传递数据
+    double endTimeStamp = [self.endDate timeIntervalSince1970];
+    NSUserDefaults *shareDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.tomate"];
+    if (shareDefaults) {
+        [shareDefaults setDouble:endTimeStamp forKey:@"date"];
+        [shareDefaults setInteger:seconds forKey:@"maxValue"];
+        [shareDefaults synchronize];
+    }
     
     // 手表？？
+    
+    
     
     // 定时器
     [self.timer invalidate];
@@ -214,6 +224,13 @@
     
     self.currentType = TimerTypeIdle;
     [self setUIModeForTimerType:TimerTypeIdle];
+    
+    // widgeExtention
+    NSUserDefaults *shareDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.tomate"];
+    if (shareDefaults) {
+        [shareDefaults removeObjectForKey:@"date"];
+        [shareDefaults synchronize];
+    }
     
     // 未写手表！！！
     

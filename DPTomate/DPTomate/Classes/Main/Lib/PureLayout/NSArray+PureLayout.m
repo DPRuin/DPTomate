@@ -397,7 +397,9 @@
     }
 #if TARGET_OS_IPHONE
 #   if !defined(PURELAYOUT_APP_EXTENSIONS)
-    BOOL isRightToLeftLayout = [[UIApplication sharedApplication] userInterfaceLayoutDirection] == UIUserInterfaceLayoutDirectionRightToLeft;
+    // BOOL isRightToLeftLayout = [[UIApplication sharedApplication] userInterfaceLayoutDirection] == UIUserInterfaceLayoutDirectionRightToLeft;
+#warning DPRuin改源码
+    BOOL isRightToLeftLayout = NO;
 #   else
     // App Extensions may not access -[UIApplication sharedApplication]; fall back to checking the bundle's preferred localization character direction
     BOOL isRightToLeftLayout = [NSLocale characterDirectionForLanguage:[[NSBundle mainBundle] preferredLocalizations][0]] == NSLocaleLanguageDirectionRightToLeft;
