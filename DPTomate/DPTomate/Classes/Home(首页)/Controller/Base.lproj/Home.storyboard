@@ -25,7 +25,7 @@
         <!--Focus View Controller-->
         <scene sceneID="k45-SG-IaE">
             <objects>
-                <viewController id="bex-w6-UOn" customClass="DPFocusViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DPFocusViewController" id="bex-w6-UOn" customClass="DPFocusViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aIL-lR-ad8"/>
                         <viewControllerLayoutGuide type="bottom" id="pCg-xE-e4L"/>

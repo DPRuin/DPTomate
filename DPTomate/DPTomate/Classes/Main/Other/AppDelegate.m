@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "DPFocusViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) DPFocusViewController *focusVC;
 
 @end
 
@@ -45,6 +48,53 @@
 }
 
 /**
+ *  懒加载
+ */
+- (DPFocusViewController *)focusVC
+{
+    if (!_focusVC) {
+        UIStoryboard *homeSB = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+        DPFocusViewController *focusVC = (DPFocusViewController *)[homeSB instantiateViewControllerWithIdentifier:@"DPFocusViewController"];
+        self.focusVC = focusVC;
+    }
+    return _focusVC;
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
+{
+    DPLog(@"handleActionWithIdentifier");
+    
+    if (identifier == UserNotificationBreakActionIdentifier) { // 开始休息
+        [self.focusVC startBreak:nil];
+    } else if (identifier == UserNotificationWorkActionIdentifier) { // 开始工作
+        [self.focusVC startWork:nil];
+    }
+    
+    // 手表？？？
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    
+    NSString *shortcut = shortcutItem.type;
+    DPLog(@"performActionForShortcutItem-%@", shortcut);
+    NSString *last = [[shortcut componentsSeparatedByString:@"."] lastObject];
+    if (last == nil) {
+        completionHandler(NO);
+    }
+    
+    if ([last isEqualToString:@"Work"]) {
+        [self.focusVC startTimerWithType:TimerTypeWork];
+    } else if ([last isEqualToString:@"Break"]) {
+        [self.focusVC startTimerWithType:TimerTypeBreak];
+    } else {
+        completionHandler(NO);
+    }
+    
+    completionHandler(YES);
+}
+
+/**
  * 应用的默认设置
  */
 - (void)registerDefaultUserDefaults
@@ -52,11 +102,27 @@
     [[NSUserDefaults standardUserDefaults] setInteger:1501 forKey:TimerTypeWorkKey];
     [[NSUserDefaults standardUserDefaults] setInteger:301 forKey:TimerTypeBreakKey];
     [[NSUserDefaults standardUserDefaults] setInteger:601 forKey:TimerTypeProcrastinationKey];
+    
+    [NSUserDefaults standardUserDefaults] ;
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     // 注册通知
+    UIMutableUserNotificationAction *breakAction = [[UIMutableUserNotificationAction alloc] init];
+    breakAction.identifier = UserNotificationBreakActionIdentifier;
+    breakAction.title = NSLocalizedString(@"Start Break", nil);
+    breakAction.activationMode = UIUserNotificationActivationModeBackground;
+    
+    UIMutableUserNotificationAction *workAcion = [[UIMutableUserNotificationAction alloc] init];
+    workAcion.identifier = UserNotificationWorkActionIdentifier;
+    workAcion.title = NSLocalizedString(@"Start Work", nil);
+    workAcion.activationMode = UIUserNotificationActivationModeBackground;
+    
+    UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
+    [category setActions:@[breakAction, workAcion] forContext:UIUserNotificationActionContextDefault];
+    category.identifier = LocalNotificationCategoryIdentifier;
+    
     UIUserNotificationType notificationType = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
-    UIUserNotificationSettings *notificaitonSettings = [UIUserNotificationSettings settingsForTypes:notificationType categories:nil];
+    UIUserNotificationSettings *notificaitonSettings = [UIUserNotificationSettings settingsForTypes:notificationType categories: [NSSet setWithArray:@[category]]];
     [[UIApplication sharedApplication] registerUserNotificationSettings:notificaitonSettings];
 }
 

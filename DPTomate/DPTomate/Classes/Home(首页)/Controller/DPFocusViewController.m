@@ -7,7 +7,6 @@
 //
 
 #import "DPFocusViewController.h"
-#import "DPTimerView.h"
 #import "DPButton.h"
 #import <AudioToolbox/AudioToolbox.h>
 
@@ -100,7 +99,7 @@
 }
 
 /**
- *  倒计时
+ *  开时倒计时
  */
 - (void)startTimerWithType:(TimerType)type
 {
@@ -174,8 +173,9 @@
     self.localNotification = [[UILocalNotification alloc] init];
     self.localNotification.fireDate = self.endDate;
     NSString *alertBody = NSLocalizedString(@"time is up!", nil);
-    self.localNotification.alertBody = [NSString stringWithFormat:@"%@%@", alertBody, typeName];
+    self.localNotification.alertBody = [NSString stringWithFormat:@"%@%@", typeName, alertBody];
     self.localNotification.soundName = UILocalNotificationDefaultSoundName;
+    self.localNotification.category = LocalNotificationCategoryIdentifier;
     [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
     
     

@@ -14,6 +14,10 @@ extern NSString *const TimerTypeWorkKey;
 extern NSString *const TimerTypeBreakKey;
 extern NSString *const TimerTypeProcrastinationKey;
 
+extern NSString *const LocalNotificationCategoryIdentifier;
+extern NSString *const UserNotificationBreakActionIdentifier;
+extern NSString *const UserNotificationWorkActionIdentifier;
+
 #define DPOrangeColor DPRGBColor(212, 167, 42)
 #define DPBackgroundColor DPRGBColor(41, 42, 55)
 #define DPTimerColor DPRGBColor(111, 193, 248)
