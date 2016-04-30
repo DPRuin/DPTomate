@@ -40,8 +40,6 @@ static NSString *const maxValueKey = @"maxValue";
     self.currentBackgroundImageNumber = 0;
     self.maxValue = 1;
     
-    self.timeInterface
-    
     // 激活session
     WCSession *session = [WCSession defaultSession];
     session.delegate = self;
