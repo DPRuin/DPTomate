@@ -32,6 +32,14 @@
 		359738841CD190910063CCC2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3597387B1CD190910063CCC2 /* NSArray+PureLayout.m */; };
 		359738851CD190910063CCC2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3597387D1CD190910063CCC2 /* NSLayoutConstraint+PureLayout.m */; };
 		359738861CD190910063CCC2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3597387D1CD190910063CCC2 /* NSLayoutConstraint+PureLayout.m */; };
+		359739031CD2F7E80063CCC2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359739011CD2F7E80063CCC2 /* Interface.storyboard */; };
+		359739051CD2F7E80063CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359739041CD2F7E80063CCC2 /* Assets.xcassets */; };
+		3597390C1CD2F7E80063CCC2 /* TomateWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3597390B1CD2F7E80063CCC2 /* TomateWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		359739141CD2F7E80063CCC2 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359739131CD2F7E80063CCC2 /* InterfaceController.m */; };
+		359739171CD2F7E80063CCC2 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 359739161CD2F7E80063CCC2 /* ExtensionDelegate.m */; };
+		3597391A1CD2F7E80063CCC2 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359739191CD2F7E80063CCC2 /* NotificationController.m */; };
+		3597391C1CD2F7E80063CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3597391B1CD2F7E80063CCC2 /* Assets.xcassets */; };
+		359739201CD2F7E80063CCC2 /* TomateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 359738FF1CD2F7E80063CCC2 /* TomateWatch.app */; };
 		35C4F75D1CC71FB400EF6B3B /* DPInputHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +50,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 359738601CD03EBC0063CCC2;
 			remoteInfo = DPToday;
+		};
+		3597390D1CD2F7E80063CCC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35758EA81CB4AD4C00F2B54B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3597390A1CD2F7E80063CCC2;
+			remoteInfo = "TomateWatch Extension";
+		};
+		3597391E1CD2F7E80063CCC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35758EA81CB4AD4C00F2B54B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 359738FE1CD2F7E80063CCC2;
+			remoteInfo = TomateWatch;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,6 +77,28 @@
 				359738701CD03EBC0063CCC2 /* DPToday.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359739241CD2F7E90063CCC2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3597390C1CD2F7E80063CCC2 /* TomateWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359739281CD2F7E90063CCC2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				359739201CD2F7E80063CCC2 /* TomateWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -108,6 +152,22 @@
 		359738801CD190910063CCC2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		359738C11CD1DE0E0063CCC2 /* DPTomate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DPTomate.entitlements; sourceTree = "<group>"; };
 		359738C21CD1E7170063CCC2 /* DPToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DPToday.entitlements; sourceTree = "<group>"; };
+		359738FF1CD2F7E80063CCC2 /* TomateWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomateWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		359739021CD2F7E80063CCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		359739041CD2F7E80063CCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		359739061CD2F7E80063CCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3597390B1CD2F7E80063CCC2 /* TomateWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TomateWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		359739111CD2F7E80063CCC2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		359739121CD2F7E80063CCC2 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		359739131CD2F7E80063CCC2 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		359739151CD2F7E80063CCC2 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		359739161CD2F7E80063CCC2 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		359739181CD2F7E80063CCC2 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		359739191CD2F7E80063CCC2 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		3597391B1CD2F7E80063CCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3597391D1CD2F7E80063CCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3597392A1CD367CA0063CCC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
+		3597392C1CD367CE0063CCC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		35C4F75B1CC71FB400EF6B3B /* DPInputHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPInputHostView.h; sourceTree = "<group>"; };
 		35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPInputHostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +188,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		359739081CD2F7E80063CCC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +203,8 @@
 			children = (
 				35758EB21CB4AD4C00F2B54B /* DPTomate */,
 				359738651CD03EBC0063CCC2 /* DPToday */,
+				359739001CD2F7E80063CCC2 /* TomateWatch */,
+				3597390F1CD2F7E80063CCC2 /* TomateWatch Extension */,
 				359738621CD03EBC0063CCC2 /* Frameworks */,
 				35758EB11CB4AD4C00F2B54B /* Products */,
 			);
@@ -146,6 +215,8 @@
 			children = (
 				35758EB01CB4AD4C00F2B54B /* DPTomate.app */,
 				359738611CD03EBC0063CCC2 /* DPToday.appex */,
+				359738FF1CD2F7E80063CCC2 /* TomateWatch.app */,
+				3597390B1CD2F7E80063CCC2 /* TomateWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +373,40 @@
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
+		359739001CD2F7E80063CCC2 /* TomateWatch */ = {
+			isa = PBXGroup;
+			children = (
+				359739011CD2F7E80063CCC2 /* Interface.storyboard */,
+				359739041CD2F7E80063CCC2 /* Assets.xcassets */,
+				359739061CD2F7E80063CCC2 /* Info.plist */,
+			);
+			path = TomateWatch;
+			sourceTree = "<group>";
+		};
+		3597390F1CD2F7E80063CCC2 /* TomateWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				359739121CD2F7E80063CCC2 /* InterfaceController.h */,
+				359739131CD2F7E80063CCC2 /* InterfaceController.m */,
+				359739151CD2F7E80063CCC2 /* ExtensionDelegate.h */,
+				359739161CD2F7E80063CCC2 /* ExtensionDelegate.m */,
+				359739181CD2F7E80063CCC2 /* NotificationController.h */,
+				359739191CD2F7E80063CCC2 /* NotificationController.m */,
+				3597391B1CD2F7E80063CCC2 /* Assets.xcassets */,
+				3597391D1CD2F7E80063CCC2 /* Info.plist */,
+				359739101CD2F7E80063CCC2 /* Supporting Files */,
+			);
+			path = "TomateWatch Extension";
+			sourceTree = "<group>";
+		};
+		359739101CD2F7E80063CCC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				359739111CD2F7E80063CCC2 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,11 +418,13 @@
 				35758EAD1CB4AD4C00F2B54B /* Frameworks */,
 				35758EAE1CB4AD4C00F2B54B /* Resources */,
 				3597386F1CD03EBC0063CCC2 /* Embed App Extensions */,
+				359739281CD2F7E90063CCC2 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				3597386E1CD03EBC0063CCC2 /* PBXTargetDependency */,
+				3597391F1CD2F7E80063CCC2 /* PBXTargetDependency */,
 			);
 			name = DPTomate;
 			productName = DPTomate;
@@ -340,6 +447,40 @@
 			productName = DPToday;
 			productReference = 359738611CD03EBC0063CCC2 /* DPToday.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		359738FE1CD2F7E80063CCC2 /* TomateWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359739251CD2F7E90063CCC2 /* Build configuration list for PBXNativeTarget "TomateWatch" */;
+			buildPhases = (
+				359738FD1CD2F7E80063CCC2 /* Resources */,
+				359739241CD2F7E90063CCC2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3597390E1CD2F7E80063CCC2 /* PBXTargetDependency */,
+			);
+			name = TomateWatch;
+			productName = TomateWatch;
+			productReference = 359738FF1CD2F7E80063CCC2 /* TomateWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3597390A1CD2F7E80063CCC2 /* TomateWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359739211CD2F7E90063CCC2 /* Build configuration list for PBXNativeTarget "TomateWatch Extension" */;
+			buildPhases = (
+				359739071CD2F7E80063CCC2 /* Sources */,
+				359739081CD2F7E80063CCC2 /* Frameworks */,
+				359739091CD2F7E80063CCC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TomateWatch Extension";
+			productName = "TomateWatch Extension";
+			productReference = 3597390B1CD2F7E80063CCC2 /* TomateWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -369,6 +510,14 @@
 							};
 						};
 					};
+					359738FE1CD2F7E80063CCC2 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = WVDCG7BX62;
+					};
+					3597390A1CD2F7E80063CCC2 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = WVDCG7BX62;
+					};
 				};
 			};
 			buildConfigurationList = 35758EAB1CB4AD4C00F2B54B /* Build configuration list for PBXProject "DPTomate" */;
@@ -387,6 +536,8 @@
 			targets = (
 				35758EAF1CB4AD4C00F2B54B /* DPTomate */,
 				359738601CD03EBC0063CCC2 /* DPToday */,
+				359738FE1CD2F7E80063CCC2 /* TomateWatch */,
+				3597390A1CD2F7E80063CCC2 /* TomateWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -409,6 +560,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3597386B1CD03EBC0063CCC2 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359738FD1CD2F7E80063CCC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359739051CD2F7E80063CCC2 /* Assets.xcassets in Resources */,
+				359739031CD2F7E80063CCC2 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359739091CD2F7E80063CCC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3597391C1CD2F7E80063CCC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +615,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		359739071CD2F7E80063CCC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359739171CD2F7E80063CCC2 /* ExtensionDelegate.m in Sources */,
+				359739141CD2F7E80063CCC2 /* InterfaceController.m in Sources */,
+				3597391A1CD2F7E80063CCC2 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -454,6 +632,16 @@
 			isa = PBXTargetDependency;
 			target = 359738601CD03EBC0063CCC2 /* DPToday */;
 			targetProxy = 3597386D1CD03EBC0063CCC2 /* PBXContainerItemProxy */;
+		};
+		3597390E1CD2F7E80063CCC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3597390A1CD2F7E80063CCC2 /* TomateWatch Extension */;
+			targetProxy = 3597390D1CD2F7E80063CCC2 /* PBXContainerItemProxy */;
+		};
+		3597391F1CD2F7E80063CCC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 359738FE1CD2F7E80063CCC2 /* TomateWatch */;
+			targetProxy = 3597391E1CD2F7E80063CCC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -501,6 +689,16 @@
 				3597386A1CD03EBC0063CCC2 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		359739011CD2F7E80063CCC2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				359739021CD2F7E80063CCC2 /* Base */,
+				3597392A1CD367CA0063CCC2 /* en */,
+				3597392C1CD367CE0063CCC2 /* zh-Hans */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -650,6 +848,68 @@
 			};
 			name = Release;
 		};
+		359739221CD2F7E90063CCC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TomateWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		359739231CD2F7E90063CCC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TomateWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		359739261CD2F7E90063CCC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = TomateWatch_Extension;
+				INFOPLIST_FILE = TomateWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		359739271CD2F7E90063CCC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = TomateWatch_Extension;
+				INFOPLIST_FILE = TomateWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -676,6 +936,22 @@
 			buildConfigurations = (
 				359738711CD03EBD0063CCC2 /* Debug */,
 				359738721CD03EBD0063CCC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		359739211CD2F7E90063CCC2 /* Build configuration list for PBXNativeTarget "TomateWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359739221CD2F7E90063CCC2 /* Debug */,
+				359739231CD2F7E90063CCC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		359739251CD2F7E90063CCC2 /* Build configuration list for PBXNativeTarget "TomateWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359739261CD2F7E90063CCC2 /* Debug */,
+				359739271CD2F7E90063CCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

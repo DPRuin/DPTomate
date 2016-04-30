@@ -1,0 +1,13 @@
+
+/* Class = "WKInterfaceMenuItem"; title = "Menu Item"; ObjectID = "65b-gA-tsw"; */
+"65b-gA-tsw.title" = "Break";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
+"IdU-wH-bcW.text" = "Alert Label";
+
+/* Class = "WKInterfaceMenuItem"; title = "Break"; ObjectID = "bhV-Ig-hg3"; */
+"bhV-Ig-hg3.title" = "Stop";
+
+/* Class = "WKInterfaceMenuItem"; title = "Work"; ObjectID = "daZ-78-jML"; */
+"daZ-78-jML.title" = "Work";
+

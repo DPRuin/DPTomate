@@ -1,0 +1,12 @@
+
+/* Class = "WKInterfaceMenuItem"; title = "Menu Item"; ObjectID = "65b-gA-tsw"; */
+"65b-gA-tsw.title" = "休息";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
+"IdU-wH-bcW.text" = "Alert Label";
+
+/* Class = "WKInterfaceMenuItem"; title = "Stop"; ObjectID = "bhV-Ig-hg3"; */
+"bhV-Ig-hg3.title" = "停止";
+
+/* Class = "WKInterfaceMenuItem"; title = "Work"; ObjectID = "daZ-78-jML"; */
+"daZ-78-jML.title" = "工作";

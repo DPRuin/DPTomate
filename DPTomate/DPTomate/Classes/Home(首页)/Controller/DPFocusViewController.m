@@ -9,6 +9,7 @@
 #import "DPFocusViewController.h"
 #import "DPButton.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
 @interface DPFocusViewController ()
 
@@ -159,9 +160,18 @@
         [shareDefaults synchronize];
     }
     
-    // 手表？？
-    
-    
+    // watch传输数据
+    WCSession *session = [WCSession defaultSession];
+    if (session.paired && session.watchAppInstalled) { // watch已配对且watchApp已安装
+        NSError *error;
+        [session updateApplicationContext:@{@"date" : @(endTimeStamp), @"maxValue" : @(seconds)} error:&error];
+        if (error) {
+            DPLog(@"session-发送数据出错");
+        }
+        
+        [session transferCurrentComplicationUserInfo:@{@"date" : @(endTimeStamp), @"maxValue" : @(seconds)}];
+        
+    }
     
     // 定时器
     [self.timer invalidate];
@@ -232,8 +242,17 @@
         [shareDefaults synchronize];
     }
     
-    // 未写手表！！！
-    
+    // watch发送数据
+    WCSession *session = [WCSession defaultSession];
+    if (session.paired && session.watchAppInstalled) {
+        NSError *error;
+        [session updateApplicationContext:@{@"date" : @(-1.0), @"maxValue" : @(-1)} error:&error];
+        if (error) {
+            DPLog(@"session-resert-发送数据出错");
+        }
+        
+        [session transferCurrentComplicationUserInfo:@{@"date" : @(-1.0), @"maxValue" : @(-1)}];
+    }
 }
 
 /**

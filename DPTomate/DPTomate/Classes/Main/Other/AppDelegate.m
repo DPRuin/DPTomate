@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "DPFocusViewController.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <WCSessionDelegate>
 
 @property (nonatomic, strong) DPFocusViewController *focusVC;
 
@@ -21,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 应用的默认设置
     [self registerDefaultUserDefaults];
+    
+    [self setupSession];
     
     return YES;
 }
@@ -48,6 +51,58 @@
 }
 
 /**
+ *  激活session
+ */
+- (void)setupSession
+{
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+}
+
+/**
+ * 应用的默认设置
+ */
+- (void)registerDefaultUserDefaults
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:1501 forKey:TimerTypeWorkKey];
+    [[NSUserDefaults standardUserDefaults] setInteger:301 forKey:TimerTypeBreakKey];
+    [[NSUserDefaults standardUserDefaults] setInteger:601 forKey:TimerTypeProcrastinationKey];
+    
+    [NSUserDefaults standardUserDefaults] ;
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // 注册通知
+    // watch通知相关
+    UIMutableUserNotificationAction *breakAction = [[UIMutableUserNotificationAction alloc] init];
+    breakAction.identifier = UserNotificationBreakActionIdentifier;
+    breakAction.title = NSLocalizedString(@"Start Break", nil);
+    breakAction.activationMode = UIUserNotificationActivationModeBackground;
+    
+    UIMutableUserNotificationAction *workAcion = [[UIMutableUserNotificationAction alloc] init];
+    workAcion.identifier = UserNotificationWorkActionIdentifier;
+    workAcion.title = NSLocalizedString(@"Start Work", nil);
+    workAcion.activationMode = UIUserNotificationActivationModeBackground;
+    
+    UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
+    [category setActions:@[breakAction, workAcion] forContext:UIUserNotificationActionContextDefault];
+    category.identifier = LocalNotificationCategoryIdentifier;
+    
+    UIUserNotificationType notificationType = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+    UIUserNotificationSettings *notificaitonSettings = [UIUserNotificationSettings settingsForTypes:notificationType categories: [NSSet setWithArray:@[category]]];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificaitonSettings];
+}
+
+#pragma mark - WCSessionDelegate
+- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message
+{
+    
+}
+
+#pragma mark - 懒加载
+/**
  *  懒加载
  */
 - (DPFocusViewController *)focusVC
@@ -60,6 +115,10 @@
     return _focusVC;
 }
 
+#pragma mark - applicationDelegate
+/**
+ *  Watch通知选中action后调用
+ */
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
 {
     DPLog(@"handleActionWithIdentifier");
@@ -70,9 +129,16 @@
         [self.focusVC startWork:nil];
     }
     
-    // 手表？？？
+    // 激活session
+    [self setupSession];
+    
+    completionHandler();
+
 }
 
+/**
+ *  3DTouch
+ */
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
 {
     
@@ -93,39 +159,5 @@
     
     completionHandler(YES);
 }
-
-/**
- * 应用的默认设置
- */
-- (void)registerDefaultUserDefaults
-{
-    [[NSUserDefaults standardUserDefaults] setInteger:1501 forKey:TimerTypeWorkKey];
-    [[NSUserDefaults standardUserDefaults] setInteger:301 forKey:TimerTypeBreakKey];
-    [[NSUserDefaults standardUserDefaults] setInteger:601 forKey:TimerTypeProcrastinationKey];
-    
-    [NSUserDefaults standardUserDefaults] ;
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    // 注册通知
-    UIMutableUserNotificationAction *breakAction = [[UIMutableUserNotificationAction alloc] init];
-    breakAction.identifier = UserNotificationBreakActionIdentifier;
-    breakAction.title = NSLocalizedString(@"Start Break", nil);
-    breakAction.activationMode = UIUserNotificationActivationModeBackground;
-    
-    UIMutableUserNotificationAction *workAcion = [[UIMutableUserNotificationAction alloc] init];
-    workAcion.identifier = UserNotificationWorkActionIdentifier;
-    workAcion.title = NSLocalizedString(@"Start Work", nil);
-    workAcion.activationMode = UIUserNotificationActivationModeBackground;
-    
-    UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
-    [category setActions:@[breakAction, workAcion] forContext:UIUserNotificationActionContextDefault];
-    category.identifier = LocalNotificationCategoryIdentifier;
-    
-    UIUserNotificationType notificationType = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
-    UIUserNotificationSettings *notificaitonSettings = [UIUserNotificationSettings settingsForTypes:notificationType categories: [NSSet setWithArray:@[category]]];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:notificaitonSettings];
-}
-
-
 
 @end
