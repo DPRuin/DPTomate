@@ -98,6 +98,20 @@
 #pragma mark - WCSessionDelegate
 - (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message
 {
+    NSString *actionStr = message[@"action"];
+    if (actionStr == nil) { return; }
+    
+    // 回到主线程
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if ([actionStr isEqualToString:@"work"]) {
+            [self.focusVC startTimerWithType:TimerTypeWork];
+        } else if ([actionStr isEqualToString:@"break"]) {
+            [self.focusVC startTimerWithType:TimerTypeBreak];
+        } else if ([actionStr isEqualToString:@"stop"]) {
+            [self.focusVC startTimerWithType:TimerTypeIdle];
+        }
+    });
     
 }
 

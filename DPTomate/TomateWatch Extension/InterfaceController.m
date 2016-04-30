@@ -40,6 +40,8 @@ static NSString *const maxValueKey = @"maxValue";
     self.currentBackgroundImageNumber = 0;
     self.maxValue = 1;
     
+    self.timeInterface
+    
     // 激活session
     WCSession *session = [WCSession defaultSession];
     session.delegate = self;
@@ -64,6 +66,22 @@ static NSString *const maxValueKey = @"maxValue";
  */
 - (void)updateUserInterface
 {
+    if (!_endDate) {return;}
+    
+    NSInteger promillValue = (NSInteger)(self.endDate.timeIntervalSinceNow / (double)self.maxValue * 100.0 + 1);
+    if (promillValue == 0) {
+        [self.backgroundGroup setBackgroundImageNamed:nil];
+        return;
+    } else if (promillValue < 0) {
+        [self.timer invalidate];
+        [self.timeInterface stop];
+        return;
+    }
+    
+    self.currentBackgroundImageNumber = promillValue;
+    NSString *imageName = [NSString stringWithFormat:@"fiveMin%03d", promillValue];
+    [self.backgroundGroup setBackgroundImageNamed:imageName];
+    
 }
 
 /** 
@@ -82,6 +100,34 @@ static NSString *const maxValueKey = @"maxValue";
     } else {
         [self.timeInterface stop];
         [self.timer invalidate];
+    }
+    
+}
+
+
+#pragma mark - MenuItem点击了
+- (IBAction)startWork {
+    [self sendAction:@"work"];
+}
+
+- (IBAction)startBreak {
+    [self sendAction:@"break"];
+}
+
+- (IBAction)startStop {
+    [self sendAction:@"stop"];
+}
+
+/**
+ *  向手机app发送数据
+ */
+- (void)sendAction:(NSString *)actionStr
+{
+    WCSession *session = [WCSession defaultSession];
+    if (session.isReachable) { // 实时交互通信
+        [session sendMessage:@{@"action" : actionStr} replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
+            DPLog(@"session-sendMessaage-%@", error);
+        }];
     }
     
 }

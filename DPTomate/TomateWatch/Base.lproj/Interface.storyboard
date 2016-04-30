@@ -26,9 +26,21 @@
                     </items>
                     <menu key="menu" id="M5K-Wc-4cZ">
                         <items>
-                            <menuItem title="Work" image="work" id="daZ-78-jML"/>
-                            <menuItem title="Menu Item" image="breakTime" id="65b-gA-tsw" userLabel="Break"/>
-                            <menuItem title="Stop" image="stop" id="bhV-Ig-hg3"/>
+                            <menuItem title="Work" image="work" id="daZ-78-jML">
+                                <connections>
+                                    <action selector="startWork" destination="AgC-eL-Hgc" id="26o-bm-jzv"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Menu Item" image="breakTime" id="65b-gA-tsw" userLabel="Break">
+                                <connections>
+                                    <action selector="startBreak" destination="AgC-eL-Hgc" id="fLY-ja-kyQ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop" image="stop" id="bhV-Ig-hg3">
+                                <connections>
+                                    <action selector="startStop" destination="AgC-eL-Hgc" id="6Z6-nB-tGD"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
