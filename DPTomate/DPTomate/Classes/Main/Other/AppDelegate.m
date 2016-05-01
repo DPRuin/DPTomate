@@ -98,19 +98,28 @@
 #pragma mark - WCSessionDelegate
 - (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message
 {
+    DPLog(@"-------%@", [NSThread currentThread]);
+    DPLog(@"didReceiveMessage");
     NSString *actionStr = message[@"action"];
     if (actionStr == nil) { return; }
     
     // 回到主线程
     dispatch_async(dispatch_get_main_queue(), ^{
+        DPLog(@"-------%@", [NSThread currentThread]);
         
         if ([actionStr isEqualToString:@"work"]) {
-            [self.focusVC startTimerWithType:TimerTypeWork];
+            [self.focusVC startWork:nil];
+            DPLog(@"startWork");
+            
         } else if ([actionStr isEqualToString:@"break"]) {
-            [self.focusVC startTimerWithType:TimerTypeBreak];
+            [self.focusVC startBreak:nil];
+            DPLog(@"startBreak");
+            
         } else if ([actionStr isEqualToString:@"stop"]) {
             [self.focusVC startTimerWithType:TimerTypeIdle];
+            DPLog(@"startStop");
         }
+
     });
     
 }

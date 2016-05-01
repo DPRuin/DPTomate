@@ -40,6 +40,7 @@
 		3597391A1CD2F7E80063CCC2 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359739191CD2F7E80063CCC2 /* NotificationController.m */; };
 		3597391C1CD2F7E80063CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3597391B1CD2F7E80063CCC2 /* Assets.xcassets */; };
 		359739201CD2F7E80063CCC2 /* TomateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 359738FF1CD2F7E80063CCC2 /* TomateWatch.app */; };
+		35973A241CD5C5A40063CCC2 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35973A231CD5C5A40063CCC2 /* ComplicationController.m */; };
 		35C4F75D1CC71FB400EF6B3B /* DPInputHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +169,8 @@
 		3597391D1CD2F7E80063CCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3597392A1CD367CA0063CCC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		3597392C1CD367CE0063CCC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		35973A221CD5C5A40063CCC2 /* ComplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		35973A231CD5C5A40063CCC2 /* ComplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		35C4F75B1CC71FB400EF6B3B /* DPInputHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPInputHostView.h; sourceTree = "<group>"; };
 		35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPInputHostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +395,8 @@
 				359739161CD2F7E80063CCC2 /* ExtensionDelegate.m */,
 				359739181CD2F7E80063CCC2 /* NotificationController.h */,
 				359739191CD2F7E80063CCC2 /* NotificationController.m */,
+				35973A221CD5C5A40063CCC2 /* ComplicationController.h */,
+				35973A231CD5C5A40063CCC2 /* ComplicationController.m */,
 				3597391B1CD2F7E80063CCC2 /* Assets.xcassets */,
 				3597391D1CD2F7E80063CCC2 /* Info.plist */,
 				359739101CD2F7E80063CCC2 /* Supporting Files */,
@@ -620,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				359739171CD2F7E80063CCC2 /* ExtensionDelegate.m in Sources */,
+				35973A241CD5C5A40063CCC2 /* ComplicationController.m in Sources */,
 				359739141CD2F7E80063CCC2 /* InterfaceController.m in Sources */,
 				3597391A1CD2F7E80063CCC2 /* NotificationController.m in Sources */,
 			);
@@ -851,6 +857,7 @@
 		359739221CD2F7E90063CCC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "TomateWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp.watchkitextension;
@@ -865,6 +872,7 @@
 		359739231CD2F7E90063CCC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "TomateWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp.watchkitextension;

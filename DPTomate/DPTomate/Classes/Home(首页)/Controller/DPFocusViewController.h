@@ -22,8 +22,10 @@
  */
 - (IBAction)startWork:(DPButton *)sender;
 
+
 /**
  *  开时倒计时
  */
 - (void)startTimerWithType:(TimerType)type;
+
 @end

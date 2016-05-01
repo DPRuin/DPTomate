@@ -11,7 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
-@interface DPFocusViewController ()
+@interface DPFocusViewController () <WCSessionDelegate>
 
 /** 定时器 */
 @property (nonatomic, strong) NSTimer *timer;
@@ -104,6 +104,7 @@
  */
 - (void)startTimerWithType:(TimerType)type
 {
+    DPLog(@"startTimerWithType-%ld", type);
     [self.timerView setDuration:0 maxValue:1.0];
     
     // 倒计多少秒
@@ -144,7 +145,7 @@
             break;
         }
     }
-    
+    DPLog(@"--seconds-%ld", seconds);
     // 结束时间
     self.endDate = [[NSDate alloc] initWithTimeIntervalSinceNow:seconds];
     

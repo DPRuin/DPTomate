@@ -123,6 +123,7 @@ static NSString *const maxValueKey = @"maxValue";
 {
     WCSession *session = [WCSession defaultSession];
     if (session.isReachable) { // 实时交互通信
+        DPLog(@"sendMessae");
         [session sendMessage:@{@"action" : actionStr} replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
             DPLog(@"session-sendMessaage-%@", error);
         }];
