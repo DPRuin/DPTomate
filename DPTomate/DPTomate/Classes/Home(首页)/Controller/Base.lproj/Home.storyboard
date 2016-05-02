@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmr-S4-yPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1089" y="349"/>
+            <point key="canvasLocation" x="-980.25" y="285"/>
         </scene>
         <!--Focus View Controller-->
         <scene sceneID="k45-SG-IaE">
@@ -89,9 +89,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pCg-xE-e4L" firstAttribute="top" secondItem="QSK-YN-l56" secondAttribute="bottom" constant="20" id="Blg-hT-Mtn"/>
-                            <constraint firstItem="Fm0-tv-On8" firstAttribute="leading" secondItem="sF2-SB-Mcy" secondAttribute="leadingMargin" id="KMJ-Ut-mIM"/>
-                            <constraint firstItem="Fm0-tv-On8" firstAttribute="top" secondItem="aIL-lR-ad8" secondAttribute="bottom" constant="8" id="Nlf-3u-c2d"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fm0-tv-On8" secondAttribute="trailing" id="PYb-YO-UcU"/>
+                            <constraint firstItem="Fm0-tv-On8" firstAttribute="leading" secondItem="sF2-SB-Mcy" secondAttribute="leadingMargin" id="KMJ-Ut-mIM">
+                                <variation key="widthClass=regular" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="Fm0-tv-On8" firstAttribute="top" secondItem="aIL-lR-ad8" secondAttribute="bottom" constant="8" id="Nlf-3u-c2d">
+                                <variation key="widthClass=regular" constant="44"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fm0-tv-On8" secondAttribute="trailing" id="PYb-YO-UcU">
+                                <variation key="widthClass=regular" constant="64"/>
+                            </constraint>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="top" secondItem="3gc-lg-Ohz" secondAttribute="bottom" constant="-60" id="RGs-M1-Gae"/>
                             <constraint firstItem="7if-g5-igw" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" constant="-120" id="c7C-BP-Omn"/>
                             <constraint firstItem="pCg-xE-e4L" firstAttribute="top" secondItem="7if-g5-igw" secondAttribute="bottom" constant="40" id="fXV-Nc-XDi"/>
@@ -123,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBq-IF-wkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-335" y="349"/>
+            <point key="canvasLocation" x="-238.5" y="285"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Ca9-dH-cCD">
@@ -186,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzu-wO-wfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="349"/>
+            <point key="canvasLocation" x="498" y="285"/>
         </scene>
     </scenes>
     <resources>
