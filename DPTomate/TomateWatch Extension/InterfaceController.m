@@ -161,7 +161,12 @@ static NSString *const maxValueKey = @"maxValue";
 
 - (void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *,id> *)userInfo
 {
-    // 自定义表盘
+    // 更新自定义表盘complication
+    CLKComplicationServer *server = [CLKComplicationServer sharedInstance];
+    
+    for (CLKComplication *complication in server.activeComplications) {
+        [server reloadTimelineForComplication:complication];
+    }
 }
 
 

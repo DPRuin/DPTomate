@@ -15,6 +15,8 @@
     [self setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self setTitleColor:DPOrangeColor forState:UIControlStateSelected];
     self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:22];
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)drawRect:(CGRect)rect {

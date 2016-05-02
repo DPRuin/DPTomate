@@ -47,8 +47,8 @@
                                     <constraint firstAttribute="height" constant="80" id="T8R-1p-voY"/>
                                     <constraint firstAttribute="width" constant="80" id="YQv-Xr-GMp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="22"/>
-                                <state key="normal" title="拖延">
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
+                                <state key="normal" title="Procrastinate">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="width" constant="80" id="aZl-rx-Z3Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="22"/>
-                                <state key="normal" title="休息">
+                                <state key="normal" title="Break">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="width" constant="80" id="aIk-Tn-HSP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="22"/>
-                                <state key="normal" title="工作">
+                                <state key="normal" title="Work">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

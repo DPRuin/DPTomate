@@ -41,6 +41,9 @@
 		3597391C1CD2F7E80063CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3597391B1CD2F7E80063CCC2 /* Assets.xcassets */; };
 		359739201CD2F7E80063CCC2 /* TomateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 359738FF1CD2F7E80063CCC2 /* TomateWatch.app */; };
 		35973A241CD5C5A40063CCC2 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35973A231CD5C5A40063CCC2 /* ComplicationController.m */; };
+		35973A251CD6CFC70063CCC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3533D66F1CC498A2004566B7 /* InfoPlist.strings */; };
+		35973A271CD6CFD00063CCC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3533D6741CC498DC004566B7 /* Localizable.strings */; };
+		35973A281CD6CFE70063CCC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3533D6741CC498DC004566B7 /* Localizable.strings */; };
 		35C4F75D1CC71FB400EF6B3B /* DPInputHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C4F75C1CC71FB400EF6B3B /* DPInputHostView.m */; };
 /* End PBXBuildFile section */
 
@@ -573,6 +576,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				359739051CD2F7E80063CCC2 /* Assets.xcassets in Resources */,
+				35973A281CD6CFE70063CCC2 /* Localizable.strings in Resources */,
+				35973A251CD6CFC70063CCC2 /* InfoPlist.strings in Resources */,
 				359739031CD2F7E80063CCC2 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3597391C1CD2F7E80063CCC2 /* Assets.xcassets in Resources */,
+				35973A271CD6CFD00063CCC2 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
