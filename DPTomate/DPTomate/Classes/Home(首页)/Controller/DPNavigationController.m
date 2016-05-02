@@ -21,10 +21,10 @@
     self.navigationBar.barTintColor = DPBackgroundColor;
     
     // 导航栏标题颜色
-    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : DPBlueColor};
+    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : DPOrangeColor};
     
     // 导航栏字体颜色
-    self.navigationBar.tintColor = DPBlueColor;
+    self.navigationBar.tintColor = DPOrangeColor;
     
     
 }

@@ -18,7 +18,7 @@ extern NSString *const LocalNotificationCategoryIdentifier;
 extern NSString *const UserNotificationBreakActionIdentifier;
 extern NSString *const UserNotificationWorkActionIdentifier;
 
-#define DPOrangeColor DPRGBColor(212, 167, 42)
-#define DPBackgroundColor DPRGBColor(41, 42, 55)
-#define DPTimerColor DPRGBColor(111, 193, 248)
-#define DPBlueColor DPRGBColor(63, 117, 255)
+#define DPOrangeColor DPRGBColor(231, 145, 100)  // 按钮颜色 导航栏字体颜色
+#define DPBackgroundColor DPRGBColor(184, 210, 183)  // 背景颜色 导航栏背景色
+#define DPTimerColor DPRGBColor(111, 193, 248)  // 未用
+#define DPBlueColor DPRGBColor(226, 116, 107)  // 圆环颜色 设置界面字体颜色

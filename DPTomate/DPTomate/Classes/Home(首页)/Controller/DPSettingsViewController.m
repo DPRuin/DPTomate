@@ -169,8 +169,7 @@
             break;
     }
     NSString *titleStr = [NSString stringWithFormat:@"%@ min", minutes];
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:titleStr attributes:@{NSForegroundColorAttributeName : DPOrangeColor
-                                                                                                 }];
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:titleStr attributes:@{NSForegroundColorAttributeName : DPBlueColor}];
     
     return title;
     

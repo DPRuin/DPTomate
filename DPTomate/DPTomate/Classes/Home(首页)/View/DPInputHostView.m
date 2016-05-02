@@ -55,7 +55,7 @@
 
 - (void)drawRect:(CGRect)rect {
     self.layer.cornerRadius = 10;
-    self.layer.borderColor = DPOrangeColor.CGColor;
+    self.layer.borderColor = DPBlueColor.CGColor;
     
     
     if (self.isSelected) {

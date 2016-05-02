@@ -106,7 +106,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="H0Y-OX-0zD">
-                        <barButtonItem key="rightBarButtonItem" title="Setting" id="kAs-hj-d5s">
+                        <barButtonItem key="rightBarButtonItem" image="seting" id="kAs-hj-d5s">
                             <connections>
                                 <segue destination="Hjj-eL-08M" kind="show" id="Zo6-sz-qoo"/>
                             </connections>
@@ -187,4 +187,7 @@
             <point key="canvasLocation" x="402" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="seting" width="30" height="30"/>
+    </resources>
 </document>
