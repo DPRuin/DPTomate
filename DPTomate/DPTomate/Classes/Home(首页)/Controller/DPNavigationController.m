@@ -17,8 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 导航栏背景颜色
     self.navigationBar.barTintColor = DPBackgroundColor;
+    
+    // 导航栏标题颜色
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : DPBlueColor};
+    
+    // 导航栏字体颜色
+    self.navigationBar.tintColor = DPBlueColor;
+    
     
 }
 

@@ -12,8 +12,7 @@
 
 - (void)awakeFromNib
 {
-    [self setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [self setTitleColor:DPOrangeColor forState:UIControlStateSelected];
+    [self setTitleColor:DPOrangeColor forState:UIControlStateNormal];
     self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:22];
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -22,7 +21,7 @@
 - (void)drawRect:(CGRect)rect {
     self.layer.cornerRadius = 40;
     self.layer.borderWidth = 1;
-    self.layer.borderColor = [UIColor orangeColor].CGColor;
+    self.layer.borderColor = DPOrangeColor.CGColor;
     
 }
 

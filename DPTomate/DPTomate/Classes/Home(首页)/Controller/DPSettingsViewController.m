@@ -36,6 +36,9 @@
     self.view.backgroundColor = DPBackgroundColor;
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
+    // 选中那行显示指示器
+    self.pickerView.showsSelectionIndicator = YES;
+    
     
     self.currentBreakDurationInMinutes = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeBreakKey] / 60;
     self.currentWorkDurationInMinutes = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeWorkKey] / 60;
@@ -153,7 +156,7 @@
     
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     NSString *minutes;
     switch (self.selectedTimerType) {
@@ -166,9 +169,10 @@
             break;
     }
     NSString *titleStr = [NSString stringWithFormat:@"%@ min", minutes];
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:titleStr attributes:@{NSForegroundColorAttributeName : [UIColor yellowColor]}];
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:titleStr attributes:@{NSForegroundColorAttributeName : DPOrangeColor
+                                                                                                 }];
     
-    return title.string;
+    return title;
     
 }
 
