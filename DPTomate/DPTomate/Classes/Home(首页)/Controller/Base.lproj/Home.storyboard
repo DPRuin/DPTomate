@@ -38,7 +38,9 @@
                                 <rect key="frame" x="20" y="72" width="560" height="400"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="3zi-08-E2K"/>
+                                    <constraint firstAttribute="height" constant="400" id="3zi-08-E2K">
+                                        <variation key="widthClass=regular" constant="768"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-YN-l56" customClass="DPButton">

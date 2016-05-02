@@ -80,11 +80,11 @@
     
     // 画分钟
     CGFloat percentage;
-    int dummyInt;
+    NSInteger dummyInt;
     if (!self.isShowRemaining) {
-        dummyInt = (int)(100000.0*(1 - (self.durationInSeconds - 1) / self.maxValue));
+        dummyInt = (NSInteger)(100000.0*(1 - (self.durationInSeconds - 1) / self.maxValue));
     } else {
-        dummyInt = (int)(100000.0*(self.durationInSeconds - 1) / self.maxValue);
+        dummyInt = (NSInteger)(100000.0*(self.durationInSeconds - 1) / self.maxValue);
     }
     
     percentage = dummyInt / 100000.0;
@@ -104,10 +104,14 @@
     // 画秒
     CGFloat secondsPercentage;
     if (self.isShowRemaining) {
-        secondsPercentage = ((int)self.durationInSeconds - 1) % 60;
+        dummyInt = (NSInteger)(100000 * (self.durationInSeconds - 1)) % (60 * 100000);
     } else {
-        secondsPercentage = 60 - ((int)self.durationInSeconds - 1) % 60;
+        dummyInt = (60 * 100000 - (NSInteger)( 100000 * (self.durationInSeconds - 1))) % (60*100000);
     }
+    
+    secondsPercentage = (CGFloat)dummyInt / 100000.0;
+    
+    DPLog(@"-secondsPercentage-%f-dumint-%ld", secondsPercentage, dummyInt);
     
     UIBezierPath *secondsRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius - 4 startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
     self.secondsShapeLayer.fillColor = [UIColor clearColor].CGColor;
