@@ -16,19 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vB5-Lh-8JJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vB5-Lh-8JJ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="D0l-fM-My2"/>
-                            <constraint firstItem="vB5-Lh-8JJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Z2I-eu-SJS"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vB5-Lh-8JJ" secondAttribute="bottom" id="hYi-Si-xw0"/>
-                            <constraint firstAttribute="trailing" secondItem="vB5-Lh-8JJ" secondAttribute="trailing" id="i8A-Vn-8RC"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>

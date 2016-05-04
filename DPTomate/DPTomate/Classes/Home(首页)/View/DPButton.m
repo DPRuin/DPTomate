@@ -19,7 +19,23 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    self.layer.cornerRadius = 40;
+    CGFloat cornerRadius;
+    
+    // 判断设备是iPhone or iPad
+    switch ([UIDevice currentDevice].userInterfaceIdiom) {
+        case UIUserInterfaceIdiomPhone:
+            cornerRadius = 40;
+            break;
+        case UIUserInterfaceIdiomPad:
+            cornerRadius = 60;
+            break;
+        default:
+            cornerRadius = 40;
+            break;
+    }
+    
+    self.layer.cornerRadius = cornerRadius;
+    
     self.layer.borderWidth = 1;
     self.layer.borderColor = DPOrangeColor.CGColor;
     

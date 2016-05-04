@@ -39,6 +39,7 @@
 - (void)awakeFromNib
 {
     [self setupTimerView];
+    self.backgroundColor = [UIColor blueColor];
 }
 
 /**
@@ -67,7 +68,25 @@
     self.timeLabel = timeLabel;
     [self addSubview:timeLabel];
     timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
+    
+    // 判断设备是iphone还是ipad
+    UIFont *font;
+    switch ([UIDevice currentDevice].userInterfaceIdiom) {
+        case UIUserInterfaceIdiomPhone:
+            
+            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
+            break;
+        case UIUserInterfaceIdiomPad:
+            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:140];
+            break;
+        default:
+            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
+            break;
+    }
+    
+    
+    timeLabel.font = font;
+    
     timeLabel.textAlignment = NSTextAlignmentCenter;
     timeLabel.textColor = self.timerColor;
 }
