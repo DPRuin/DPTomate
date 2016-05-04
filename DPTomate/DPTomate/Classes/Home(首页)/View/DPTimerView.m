@@ -139,11 +139,11 @@
     
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    self.showRemaining = !self.isShowRemaining;
-    [self setNeedsDisplay];
-}
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    self.showRemaining = !self.isShowRemaining;
+//    [self setNeedsDisplay];
+//}
 
 - (void)layoutSubviews
 {
