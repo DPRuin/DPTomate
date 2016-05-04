@@ -84,7 +84,6 @@
             break;
     }
     
-    
     timeLabel.font = font;
     
     timeLabel.textAlignment = NSTextAlignmentCenter;
@@ -93,8 +92,43 @@
 
 - (void)drawRect:(CGRect)rect {
     
+    // 判断设备是iphone or ipad
+    CGFloat radiusEdge; // 圆环半径边缘间距
+    CGFloat minuteLineWidth; // 分针宽度
+    CGFloat secondsLineWidth; // 秒针宽度
+    CGFloat ringLineWidth;
+    CGFloat pathW;
+    switch ([UIDevice currentDevice].userInterfaceIdiom) {
+        case UIUserInterfaceIdiomPhone: {
+            radiusEdge = 10.0;
+            minuteLineWidth  = 3.0;
+            secondsLineWidth = 1.0;
+            ringLineWidth = 1.0;
+            pathW = 4.0;
+            break;
+        }
+            
+        case UIUserInterfaceIdiomPad: {
+            radiusEdge = 20.0;
+            minuteLineWidth  = 6.0;
+            secondsLineWidth = 1.0;
+            ringLineWidth = 1.0;
+            pathW = 8.0;
+            break;
+        }
+            
+        default: {
+            radiusEdge = 10.0;
+            minuteLineWidth  = 3.0;
+            secondsLineWidth = 1.0;
+            ringLineWidth = 1.0;
+            pathW = 4.0;
+            break;
+        }
+    }
+    
     CGPoint timerCenter = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
-    CGFloat radius = rect.size.width / 2 - 10;
+    CGFloat radius = rect.size.width / 2 - radiusEdge;
     CGFloat startAngle = M_PI_2 * 3;
     
     // 画分钟
@@ -112,7 +146,7 @@
     
     self.timerShapeLayer.fillColor = [UIColor clearColor].CGColor;
     self.timerShapeLayer.strokeColor = self.timerColor.CGColor;
-    self.timerShapeLayer.lineWidth = 3;
+    self.timerShapeLayer.lineWidth = minuteLineWidth;
     self.timerShapeLayer.strokeEnd = percentage;
     self.timerShapeLayer.path = timerRingPath.CGPath;
     
@@ -132,17 +166,17 @@
     
     DPLog(@"-secondsPercentage-%f-dumint-%ld", secondsPercentage, dummyInt);
     
-    UIBezierPath *secondsRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius - 4 startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
+    UIBezierPath *secondsRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius - pathW startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
     self.secondsShapeLayer.fillColor = [UIColor clearColor].CGColor;
     self.secondsShapeLayer.strokeColor = self.timerColor.CGColor;
-    self.secondsShapeLayer.lineWidth = 1.0;
+    self.secondsShapeLayer.lineWidth = secondsLineWidth;
     self.secondsShapeLayer.strokeEnd = secondsPercentage / 60.0;
     self.secondsShapeLayer.path = secondsRingPath.CGPath;
     
     // 画外圆
     [self.timerColor set];
-    UIBezierPath *fullRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius + 4 startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
-    fullRingPath.lineWidth = 1.0;
+    UIBezierPath *fullRingPath = [UIBezierPath bezierPathWithArcCenter:timerCenter radius:radius + pathW startAngle:startAngle endAngle:startAngle - 0.001 clockwise:YES];
+    fullRingPath.lineWidth = ringLineWidth;
     [fullRingPath stroke];
     
     // 时间label
