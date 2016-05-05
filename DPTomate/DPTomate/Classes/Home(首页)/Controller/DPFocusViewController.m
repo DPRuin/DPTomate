@@ -154,7 +154,7 @@
     
     // WidgeExtention 传递数据
     double endTimeStamp = [self.endDate timeIntervalSince1970];
-    NSUserDefaults *shareDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.tomate"];
+    NSUserDefaults *shareDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.dppomodoro"];
     if (shareDefaults) {
         [shareDefaults setDouble:endTimeStamp forKey:@"date"];
         [shareDefaults setInteger:seconds forKey:@"maxValue"];
@@ -237,7 +237,7 @@
     [self setUIModeForTimerType:TimerTypeIdle];
     
     // widgeExtention
-    NSUserDefaults *shareDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.tomate"];
+    NSUserDefaults *shareDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.dppomodoro"];
     if (shareDefaults) {
         [shareDefaults removeObjectForKey:@"date"];
         [shareDefaults synchronize];

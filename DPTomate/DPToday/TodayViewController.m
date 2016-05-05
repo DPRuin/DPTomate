@@ -60,7 +60,7 @@
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
     
-    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.tomate"];
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dpruin.dppomodoro"];
     
     double startDateAsTimeStamp = [defaults doubleForKey:@"date"];
     self.endDate = [NSDate dateWithTimeIntervalSince1970:startDateAsTimeStamp];

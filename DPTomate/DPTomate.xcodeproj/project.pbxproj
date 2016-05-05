@@ -502,7 +502,7 @@
 				TargetAttributes = {
 					35758EAF1CB4AD4C00F2B54B = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WVDCG7BX62;
+						DevelopmentTeam = 3NV32R76SX;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -511,7 +511,7 @@
 					};
 					359738601CD03EBC0063CCC2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WVDCG7BX62;
+						DevelopmentTeam = 3NV32R76SX;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -520,11 +520,11 @@
 					};
 					359738FE1CD2F7E80063CCC2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WVDCG7BX62;
+						DevelopmentTeam = 3NV32R76SX;
 					};
 					3597390A1CD2F7E80063CCC2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WVDCG7BX62;
+						DevelopmentTeam = 3NV32R76SX;
 					};
 				};
 			};
@@ -809,7 +809,7 @@
 				GCC_PREFIX_HEADER = DPTomate/Classes/Main/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = DPTomate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -826,7 +826,7 @@
 				GCC_PREFIX_HEADER = DPTomate/Classes/Main/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = DPTomate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -840,7 +840,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DPToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.DPToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro.DPToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -855,7 +855,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DPToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.DPToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro.DPToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -866,10 +866,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TomateWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -881,10 +884,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TomateWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -898,10 +904,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = TomateWatch_Extension;
 				INFOPLIST_FILE = TomateWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -915,10 +923,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = TomateWatch_Extension;
 				INFOPLIST_FILE = TomateWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.DPTomate.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dpruin.dppomodoro.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
