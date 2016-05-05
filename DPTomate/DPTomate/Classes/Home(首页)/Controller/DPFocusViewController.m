@@ -110,7 +110,7 @@
     // 倒计多少秒
     NSInteger seconds;
     // 用于本地通知
-    NSString *typeName;
+    NSString *typeName = @"";
     
     switch (type) {
         case TimerTypeWork: {
@@ -184,7 +184,8 @@
     self.localNotification = [[UILocalNotification alloc] init];
     self.localNotification.fireDate = self.endDate;
     NSString *alertBody = NSLocalizedString(@"time is up!", nil);
-    self.localNotification.alertBody = [NSString stringWithFormat:@"%@%@", typeName, alertBody];
+    
+    self.localNotification.alertBody = [NSString stringWithFormat:@"%@ %@", typeName, alertBody];
     self.localNotification.soundName = UILocalNotificationDefaultSoundName;
     self.localNotification.category = LocalNotificationCategoryIdentifier;
     [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
