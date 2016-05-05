@@ -39,7 +39,7 @@
 - (void)awakeFromNib
 {
     [self setupTimerView];
-    self.backgroundColor = [UIColor blueColor];
+    // self.backgroundColor = [UIColor blueColor];
 }
 
 /**
@@ -96,8 +96,8 @@
     CGFloat radiusEdge; // 圆环半径边缘间距
     CGFloat minuteLineWidth; // 分针宽度
     CGFloat secondsLineWidth; // 秒针宽度
-    CGFloat ringLineWidth;
-    CGFloat pathW;
+    CGFloat ringLineWidth; // 外环宽度
+    CGFloat pathW;  // 计算半径的被减数，用于计算分or秒圆环的半径
     switch ([UIDevice currentDevice].userInterfaceIdiom) {
         case UIUserInterfaceIdiomPhone: {
             radiusEdge = 10.0;

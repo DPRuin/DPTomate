@@ -44,10 +44,13 @@ static NSString *const maxValueKey = @"maxValue";
     WCSession *session = [WCSession defaultSession];
     session.delegate = self;
     [session activateSession];
+    
+    [self.timeInterface setTextColor:DPBlueColor];
 }
 
 - (void)willActivate {
     [super willActivate];
+    
     double timeStamp = [[NSUserDefaults standardUserDefaults] doubleForKey:timeStampKey];
     self.endDate = [NSDate dateWithTimeIntervalSince1970:timeStamp];
     self.maxValue = [[NSUserDefaults standardUserDefaults] integerForKey:maxValueKey];
