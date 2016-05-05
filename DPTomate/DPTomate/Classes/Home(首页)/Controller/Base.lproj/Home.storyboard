@@ -132,6 +132,7 @@
                             </constraint>
                             <constraint firstItem="Fm0-tv-On8" firstAttribute="centerY" secondItem="sF2-SB-Mcy" secondAttribute="centerY" constant="-60" id="jhT-6r-1gm">
                                 <variation key="widthClass=compact" constant="-60"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="-80"/>
                             </constraint>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" id="pSx-pX-884"/>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="top" secondItem="Fm0-tv-On8" secondAttribute="bottom" constant="8" id="rps-nf-j2G">

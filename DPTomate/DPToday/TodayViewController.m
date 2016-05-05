@@ -9,7 +9,7 @@
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "DPTimerView.h"
-#import "PureLayout.h"
+//#import "PureLayout.h"
 #import "DPConst.h"
 
 #define TimerViewWH 100.0
@@ -19,8 +19,11 @@
 @property (nonatomic, strong) NSDate *endDate;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) NSInteger maxValue;
-@property (nonatomic, weak) DPTimerView *timerView;
-@property (nonatomic, weak) UIButton *button;
+//@property (nonatomic, weak) DPTimerView *timerView;
+//@property (nonatomic, weak) UIButton *button;
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
+@property (weak, nonatomic) IBOutlet DPTimerView *timerView;
 
 @end
 
@@ -29,34 +32,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    DPTimerView *timerView = [[DPTimerView alloc] init];
-    timerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:timerView];
-    self.timerView = timerView;
+//    DPTimerView *timerView = [[DPTimerView alloc] init];
+//    timerView.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.view addSubview:timerView];
+//    self.timerView = timerView;
+    
     UIFont *timeLabelFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:(TimerViewWH*0.9/3.0-10.0)];
     [self.timerView setTimeLabelFont:timeLabelFont];
     
-    UIButton *btn = [[UIButton alloc] init];
-    btn.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:btn];
-    self.button = btn;
+//    UIButton *btn = [[UIButton alloc] init];
+//    btn.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.view addSubview:btn];
+//    self.button = btn;
     self.button.backgroundColor = [UIColor clearColor];
-    [self.button addTarget:self action:@selector(openApp) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [self.button addTarget:self action:@selector(openApp) forControlEvents:UIControlEventTouchUpInside];
     
     // 布局
-    [self.timerView autoSetDimension:ALDimensionWidth toSize:TimerViewWH];
-    [self.timerView autoSetDimension:ALDimensionHeight toSize:TimerViewWH];
-    [self.timerView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [self.timerView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10.0];
+//    [self.timerView autoSetDimension:ALDimensionWidth toSize:TimerViewWH];
+//    [self.timerView autoSetDimension:ALDimensionHeight toSize:TimerViewWH];
+//    [self.timerView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+//    [self.timerView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10.0];
     
-    [self.button autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+//    [self.button autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 }
-
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
 {
-    return UIEdgeInsetsMake(0, 0, 88.0, 0);
-    // return UIEdgeInsetsZero;
+    // return UIEdgeInsetsMake(0, 50, 88, 50);
+    return UIEdgeInsetsZero;
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
@@ -69,7 +73,7 @@
     
     DPLog(@"widgeUpdate-endate:%@ -maxValue-%ld", self.endDate, self.maxValue);
     
-    [self.timerView setDuration:0 maxValue:1.0];
+    [self.timerView setDuration:0.0 maxValue:1.0];
     
     [self.timer invalidate];
     if (self.endDate != nil) {
@@ -95,8 +99,8 @@
 /**
  *  打开ContainingApp
  */
-- (void)openApp
-{
+- (IBAction)openApp:(UIButton *)sender {
+    DPLog(@"openApp--");
     NSURL *url = [NSURL URLWithString:@"DPTomate://"];
     [self.extensionContext openURL:url completionHandler:^(BOOL success) {
         if (!success) {

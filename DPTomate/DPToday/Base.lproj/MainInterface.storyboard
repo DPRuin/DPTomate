@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -16,6 +17,30 @@
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-tF-a3D" customClass="DPTimerView">
+                                <rect key="frame" x="110" y="10" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3LJ-hm-5VR"/>
+                                    <constraint firstAttribute="width" constant="100" id="yD9-vM-7o7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNe-Qc-Ke5">
+                                <rect key="frame" x="16" y="0.0" width="288" height="120"/>
+                                <connections>
+                                    <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Fde-KN-Gd9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="TM6-tF-a3D" secondAttribute="bottom" priority="999" constant="10" id="FRt-xM-FEc"/>
+                            <constraint firstItem="TM6-tF-a3D" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="Mcq-tA-bZ5"/>
+                            <constraint firstItem="FNe-Qc-Ke5" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Mh9-2e-3ws"/>
+                            <constraint firstItem="TM6-tF-a3D" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="VKg-MD-lwM"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="FNe-Qc-Ke5" secondAttribute="bottom" priority="999" id="pIY-95-mLU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FNe-Qc-Ke5" secondAttribute="trailing" id="xkR-9p-OKu"/>
+                            <constraint firstItem="FNe-Qc-Ke5" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="yUB-dG-bvt"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -23,6 +48,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="120"/>
+                    <connections>
+                        <outlet property="button" destination="FNe-Qc-Ke5" id="OKz-Cu-22k"/>
+                        <outlet property="timerView" destination="TM6-tF-a3D" id="SVu-Pp-adz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
