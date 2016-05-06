@@ -964,6 +964,7 @@
 				359738721CD03EBD0063CCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		359739211CD2F7E90063CCC2 /* Build configuration list for PBXNativeTarget "TomateWatch Extension" */ = {
 			isa = XCConfigurationList;
@@ -972,6 +973,7 @@
 				359739231CD2F7E90063CCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		359739251CD2F7E90063CCC2 /* Build configuration list for PBXNativeTarget "TomateWatch" */ = {
 			isa = XCConfigurationList;
@@ -980,6 +982,7 @@
 				359739271CD2F7E90063CCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
