@@ -55,7 +55,7 @@
     NSInteger duration = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeWorkKey];
     DPLog(@"-duration- %ld", duration);
     
-    self.timerView.backgroundColor = [UIColor blueColor];
+    // self.timerView.backgroundColor = [UIColor blueColor];
     self.timerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.timerView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.timerView];
     
