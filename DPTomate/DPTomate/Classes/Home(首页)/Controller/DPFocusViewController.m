@@ -48,6 +48,7 @@
     self.view.backgroundColor = DPBackgroundColor;
     // 导航栏不透明
     self.navigationController.navigationBar.translucent = NO;
+    // self.navigationController.navigationBarHidden = YES;
     
     if (self.timer == nil) {
         [self.timerView setDuration:0 maxValue:1];
@@ -55,9 +56,9 @@
     NSInteger duration = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeWorkKey];
     DPLog(@"-duration- %ld", duration);
     
-    // self.timerView.backgroundColor = [UIColor blueColor];
-    self.timerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.timerView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.timerView];
+    self.timerView.backgroundColor = [UIColor blueColor];
+//    self.timerView.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.timerView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.timerView];
     
     // DPLog(@"----%@", NSStringFromCGRect(self.view.frame));
     // ipad横屏启动时默认为20

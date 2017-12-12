@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dRL-zM-URC">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dRL-zM-URC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
             <objects>
                 <navigationController id="dRL-zM-URC" customClass="DPNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iu9-rb-amX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,25 +31,24 @@
         <scene sceneID="k45-SG-IaE">
             <objects>
                 <viewController storyboardIdentifier="DPFocusViewController" id="bex-w6-UOn" customClass="DPFocusViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aIL-lR-ad8"/>
-                        <viewControllerLayoutGuide type="bottom" id="pCg-xE-e4L"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sF2-SB-Mcy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fm0-tv-On8" customClass="DPTimerView">
-                                <rect key="frame" x="20" y="64" width="560" height="352"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fm0-tv-On8" customClass="DPTimerView">
+                                <rect key="frame" x="16" y="64" width="343" height="343"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fm0-tv-On8" secondAttribute="height" multiplier="343:343" id="mSb-TZ-che"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-lg-Ohz" customClass="DPButton">
-                                <rect key="frame" x="380" y="416" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-lg-Ohz" customClass="DPButton">
+                                <rect key="frame" x="248" y="407" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="UuC-Il-xYo">
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" constant="80" id="aZl-rx-Z3Y">
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="aZl-rx-Z3Y">
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
                                 </constraints>
@@ -60,13 +60,13 @@
                                     <action selector="startBreak:" destination="bex-w6-UOn" eventType="touchUpInside" id="ImB-dG-dlk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7if-g5-igw" customClass="DPButton">
-                                <rect key="frame" x="140" y="416" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7if-g5-igw" customClass="DPButton">
+                                <rect key="frame" x="48" y="407" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="BM0-9X-QJH">
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" constant="80" id="aIk-Tn-HSP">
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="aIk-Tn-HSP">
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
                                 </constraints>
@@ -78,13 +78,13 @@
                                     <action selector="startWork:" destination="bex-w6-UOn" eventType="touchUpInside" id="kmT-hH-mll"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-YN-l56" customClass="DPButton">
-                                <rect key="frame" x="260" y="436" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-YN-l56" customClass="DPButton">
+                                <rect key="frame" x="148" y="427" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="T8R-1p-voY">
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" constant="80" id="YQv-Xr-GMp">
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="YQv-Xr-GMp">
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
                                 </constraints>
@@ -99,6 +99,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nfs-T7-Mue" firstAttribute="bottom" secondItem="QSK-YN-l56" secondAttribute="bottom" constant="84" id="4Gu-k9-2cv"/>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="top" secondItem="Fm0-tv-On8" secondAttribute="bottom" constant="-40" id="DlY-9k-7W3"/>
                             <constraint firstItem="QSK-YN-l56" firstAttribute="top" secondItem="Fm0-tv-On8" secondAttribute="bottom" constant="20" id="K7H-c0-VMG">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-40"/>
@@ -109,7 +110,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="44"/>
                             </constraint>
                             <constraint firstItem="3gc-lg-Ohz" firstAttribute="top" secondItem="7if-g5-igw" secondAttribute="top" id="LgU-zb-7Yg"/>
-                            <constraint firstItem="Fm0-tv-On8" firstAttribute="top" secondItem="aIL-lR-ad8" secondAttribute="bottom" id="Nlf-3u-c2d">
+                            <constraint firstItem="Fm0-tv-On8" firstAttribute="top" secondItem="nfs-T7-Mue" secondAttribute="top" id="Nlf-3u-c2d">
                                 <variation key="widthClass=regular" constant="0.0"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                             </constraint>
@@ -118,13 +119,13 @@
                                 <variation key="widthClass=regular" constant="0.0"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="44"/>
                             </constraint>
-                            <constraint firstItem="7if-g5-igw" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" constant="-120" id="c7C-BP-Omn">
+                            <constraint firstItem="7if-g5-igw" firstAttribute="centerX" secondItem="nfs-T7-Mue" secondAttribute="centerX" constant="-120" id="c7C-BP-Omn">
                                 <variation key="widthClass=compact" constant="-100"/>
                                 <variation key="widthClass=regular" constant="-150"/>
                             </constraint>
                             <constraint firstItem="Fm0-tv-On8" firstAttribute="leading" secondItem="sF2-SB-Mcy" secondAttribute="leadingMargin" priority="751" id="cxZ-sb-EzD"/>
-                            <constraint firstItem="Fm0-tv-On8" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" id="hkl-Q0-gOH"/>
-                            <constraint firstItem="3gc-lg-Ohz" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" constant="120" id="jAp-Hb-6sH">
+                            <constraint firstItem="Fm0-tv-On8" firstAttribute="centerX" secondItem="nfs-T7-Mue" secondAttribute="centerX" id="hkl-Q0-gOH"/>
+                            <constraint firstItem="3gc-lg-Ohz" firstAttribute="centerX" secondItem="nfs-T7-Mue" secondAttribute="centerX" constant="120" id="jAp-Hb-6sH">
                                 <variation key="widthClass=compact" constant="100"/>
                                 <variation key="widthClass=regular" constant="150"/>
                             </constraint>
@@ -133,10 +134,11 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="-80"/>
                             </constraint>
                             <constraint firstItem="3gc-lg-Ohz" firstAttribute="top" secondItem="QSK-YN-l56" secondAttribute="top" constant="-40" id="niZ-zd-noE"/>
-                            <constraint firstItem="QSK-YN-l56" firstAttribute="centerX" secondItem="sF2-SB-Mcy" secondAttribute="centerX" id="pSx-pX-884"/>
+                            <constraint firstItem="QSK-YN-l56" firstAttribute="centerX" secondItem="nfs-T7-Mue" secondAttribute="centerX" id="pSx-pX-884"/>
                             <constraint firstItem="Fm0-tv-On8" firstAttribute="trailing" secondItem="sF2-SB-Mcy" secondAttribute="trailingMargin" priority="751" id="wGo-el-RZe"/>
                             <constraint firstItem="3gc-lg-Ohz" firstAttribute="top" secondItem="QSK-YN-l56" secondAttribute="top" constant="-20" id="wca-oW-6x3"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="nfs-T7-Mue"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="DlY-9k-7W3"/>
@@ -175,31 +177,27 @@
         <scene sceneID="Ca9-dH-cCD">
             <objects>
                 <viewController id="Hjj-eL-08M" customClass="DPSettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iEu-4G-aqK"/>
-                        <viewControllerLayoutGuide type="bottom" id="NPm-SZ-WBg"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wvH-aU-UzZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-4c-HO5" customClass="DPInputHostView">
-                                <rect key="frame" x="20" y="72" width="560" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-4c-HO5" customClass="DPInputHostView">
+                                <rect key="frame" x="16" y="72" width="343" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NHx-d2-WR0"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTH-Sk-97A" customClass="DPInputHostView">
-                                <rect key="frame" x="20" y="124" width="560" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTH-Sk-97A" customClass="DPInputHostView">
+                                <rect key="frame" x="16" y="124" width="343" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="aox-65-JV7"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="fQt-9t-QLE"/>
                                 </constraints>
                             </view>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-5F-Z1D">
-                                <rect key="frame" x="20" y="184" width="560" height="300"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-5F-Z1D">
+                                <rect key="frame" x="16" y="184" width="343" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="g3L-7V-84C"/>
                                 </constraints>
@@ -210,7 +208,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="BxU-5F-Z1D" secondAttribute="trailing" id="7PE-iH-opN"/>
                             <constraint firstItem="BxU-5F-Z1D" firstAttribute="leading" secondItem="wvH-aU-UzZ" secondAttribute="leadingMargin" id="923-66-dbp"/>
                             <constraint firstItem="ew5-4c-HO5" firstAttribute="leading" secondItem="wvH-aU-UzZ" secondAttribute="leadingMargin" id="Fw1-Oo-AKU"/>
-                            <constraint firstItem="ew5-4c-HO5" firstAttribute="top" secondItem="iEu-4G-aqK" secondAttribute="bottom" constant="8" id="Hnc-pf-60b"/>
+                            <constraint firstItem="ew5-4c-HO5" firstAttribute="top" secondItem="Y8P-Tt-Nag" secondAttribute="top" constant="8" id="Hnc-pf-60b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ew5-4c-HO5" secondAttribute="trailing" id="N6R-8d-2FN"/>
                             <constraint firstItem="fTH-Sk-97A" firstAttribute="trailing" secondItem="wvH-aU-UzZ" secondAttribute="trailingMargin" id="Qhf-Nm-Q3a"/>
                             <constraint firstItem="fTH-Sk-97A" firstAttribute="top" secondItem="ew5-4c-HO5" secondAttribute="bottom" constant="8" id="VfY-h2-Mdy"/>
@@ -218,6 +216,7 @@
                             <constraint firstItem="fTH-Sk-97A" firstAttribute="leading" secondItem="wvH-aU-UzZ" secondAttribute="leadingMargin" id="e7n-Sw-fEh"/>
                             <constraint firstItem="ew5-4c-HO5" firstAttribute="top" secondItem="wvH-aU-UzZ" secondAttribute="topMargin" constant="8" id="o3R-5X-r09"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y8P-Tt-Nag"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="o3R-5X-r09"/>
