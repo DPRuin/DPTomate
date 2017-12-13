@@ -56,30 +56,30 @@
     NSInteger duration = [[NSUserDefaults standardUserDefaults] integerForKey:TimerTypeWorkKey];
     DPLog(@"-duration- %ld", duration);
     
-    self.timerView.backgroundColor = [UIColor blueColor];
+    // self.timerView.backgroundColor = [UIColor blueColor];
 //    self.timerView.translatesAutoresizingMaskIntoConstraints = NO;
 //    [self.timerView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.timerView];
     
     // DPLog(@"----%@", NSStringFromCGRect(self.view.frame));
     // ipad横屏启动时默认为20
-    if (self.view.frame.size.width == 1024) {
-        self.procrastinateTopSpace.constant = 20.0;
-    }
+//    if (self.view.frame.size.width == 1024) {
+//        self.procrastinateTopSpace.constant = 20.0;
+//    }
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-{
-    // 屏幕旋转时space 切换 20 - 40
-    CGFloat space = (size.width == 1024)? 20.0: -40.0;
-    self.procrastinateTopSpace.constant = space;
-    [self.timerView setNeedsDisplay];
-}
+//- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+//{
+//    // 屏幕旋转时space 切换 20 - 40
+//    CGFloat space = (size.width == 1024)? 20.0: -40.0;
+//    self.procrastinateTopSpace.constant = space;
+//    [self.timerView setNeedsDisplay];
+//}
 
-- (void)viewWillLayoutSubviews
-{
-    
-    [self.timerView setNeedsDisplay];
-}
+//- (void)viewWillLayoutSubviews
+//{
+//
+//    [self.timerView setNeedsDisplay];
+//}
 
 /**
  *  修改电量条样式
