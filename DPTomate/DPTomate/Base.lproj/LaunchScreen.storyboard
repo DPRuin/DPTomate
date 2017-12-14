@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,30 +16,78 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-Ti-Pqb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-Ti-Pqb">
+                                <rect key="frame" x="243.5" y="97.5" width="180" height="180"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9vr-Ti-Pqb" secondAttribute="height" multiplier="1:1" id="cvG-i9-bPO"/>
+                                    <constraint firstAttribute="width" constant="200" id="kL4-Hn-8Hp">
+                                        <variation key="heightClass=regular" constant="180"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="9vr-Ti-Pqb" secondAttribute="height" multiplier="1:1" id="rak-8o-JyK"/>
+                                    <constraint firstAttribute="width" constant="200" id="uyI-Q5-zSY">
+                                        <variation key="heightClass=compact" constant="180"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cvG-i9-bPO"/>
+                                        <exclude reference="kL4-Hn-8Hp"/>
+                                        <exclude reference="rak-8o-JyK"/>
+                                        <exclude reference="uyI-Q5-zSY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="cvG-i9-bPO"/>
+                                        <include reference="uyI-Q5-zSY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="kL4-Hn-8Hp"/>
+                                        <include reference="rak-8o-JyK"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.64705882349999999" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="0Bk-9r-uWn"/>
-                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="KUd-bH-QpL"/>
-                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Oq1-Y9-YaD"/>
-                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="vr7-0h-vkE"/>
+                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="1:1" id="4wP-Rd-gHq"/>
+                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="1:1.5" id="Fr6-A9-YIj"/>
+                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UGm-Tz-kRo"/>
+                            <constraint firstItem="9vr-Ti-Pqb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fWE-Xn-FDi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rSy-Kp-HdC"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4wP-Rd-gHq"/>
+                                <exclude reference="Fr6-A9-YIj"/>
+                                <exclude reference="UGm-Tz-kRo"/>
+                                <exclude reference="fWE-Xn-FDi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="4wP-Rd-gHq"/>
+                                <include reference="fWE-Xn-FDi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="Fr6-A9-YIj"/>
+                                <include reference="UGm-Tz-kRo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-738.08095952023996" y="60"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Image" width="414" height="736"/>
-    </resources>
 </document>
