@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fm0-tv-On8" customClass="DPTimerView">
-                                <rect key="frame" x="16" y="80" width="736" height="684"/>
+                                <rect key="frame" x="16" y="80" width="736" height="684.5"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fm0-tv-On8" secondAttribute="height" multiplier="1:1" id="5Wo-Hk-Xh7"/>
@@ -61,10 +61,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Qk-RHJ">
-                                <rect key="frame" x="16" y="780" width="736" height="228"/>
+                                <rect key="frame" x="16" y="780.5" width="736" height="227.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7if-g5-igw" customClass="DPButton">
-                                        <rect key="frame" x="512" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="512.5" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7if-g5-igw" secondAttribute="height" multiplier="1:1" id="CAQ-fQ-fn5"/>
                                             <constraint firstAttribute="width" secondItem="7if-g5-igw" secondAttribute="height" multiplier="1:1" id="XTP-Qd-xbY"/>
@@ -106,7 +106,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-YN-l56" customClass="DPButton">
-                                        <rect key="frame" x="328" y="75" width="80" height="80"/>
+                                        <rect key="frame" x="328" y="75.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="QfL-p4-lcn"/>
                                             <constraint firstAttribute="width" secondItem="QSK-YN-l56" secondAttribute="height" multiplier="1:1" id="YV8-A4-r9u"/>
@@ -148,7 +148,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-lg-Ohz" customClass="DPButton">
-                                        <rect key="frame" x="144" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="144.5" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="DZc-Sj-eOP"/>
                                             <constraint firstAttribute="width" secondItem="3gc-lg-Ohz" secondAttribute="height" multiplier="1:1" id="iGF-Ip-rJv"/>
@@ -386,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBq-IF-wkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-240" y="285"/>
+            <point key="canvasLocation" x="-242.1875" y="283.59375"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Ca9-dH-cCD">

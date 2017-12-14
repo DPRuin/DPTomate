@@ -69,22 +69,22 @@
     [self addSubview:timeLabel];
     timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
-    // 判断设备是iphone还是ipad
-    UIFont *font;
-    switch ([UIDevice currentDevice].userInterfaceIdiom) {
-        case UIUserInterfaceIdiomPhone:
-            
-            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
-            break;
-        case UIUserInterfaceIdiomPad:
-            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:140];
-            break;
-        default:
-            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
-            break;
-    }
-    
-    timeLabel.font = font;
+//    // 判断设备是iphone还是ipad
+//    UIFont *font;
+//    switch ([UIDevice currentDevice].userInterfaceIdiom) {
+//        case UIUserInterfaceIdiomPhone:
+//
+//            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
+//            break;
+//        case UIUserInterfaceIdiomPad:
+//            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:140];
+//            break;
+//        default:
+//            font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:80];
+//            break;
+//    }
+    CGFloat radiusWidth = self.frame.size.width > self.frame.size.height ? self.frame.size.height : self.frame.size.width;
+    timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:radiusWidth * 0.2];;
     
     timeLabel.textAlignment = NSTextAlignmentCenter;
     timeLabel.textColor = self.timerColor;
@@ -93,40 +93,12 @@
 - (void)drawRect:(CGRect)rect {
     
     // 判断设备是iphone or ipad
-    CGFloat radiusEdge; // 圆环半径边缘间距
-    CGFloat minuteLineWidth; // 分针宽度
-    CGFloat secondsLineWidth; // 秒针宽度
-    CGFloat ringLineWidth; // 外环宽度
-    CGFloat pathW;  // 计算半径的被减数，用于计算分or秒圆环的半径
-    switch ([UIDevice currentDevice].userInterfaceIdiom) {
-        case UIUserInterfaceIdiomPhone: {
-            radiusEdge = 10.0;
-            minuteLineWidth  = 3.0;
-            secondsLineWidth = 1.0;
-            ringLineWidth = 1.0;
-            pathW = 4.0;
-            break;
-        }
-            
-        case UIUserInterfaceIdiomPad: {
-            radiusEdge = 20.0;
-            minuteLineWidth  = 6.0;
-            secondsLineWidth = 1.0;
-            ringLineWidth = 1.0;
-            pathW = 8.0;
-            break;
-        }
-            
-        default: {
-            radiusEdge = 10.0;
-            minuteLineWidth  = 3.0;
-            secondsLineWidth = 1.0;
-            ringLineWidth = 1.0;
-            pathW = 4.0;
-            break;
-        }
-    }
-    
+    CGFloat radiusEdge = 20.0; // 圆环半径边缘间距
+    CGFloat minuteLineWidth = 6.0; // 分针宽度
+    CGFloat secondsLineWidth = 1.0; // 秒针宽度
+    CGFloat ringLineWidth = 1.0; // 外环宽度
+    CGFloat pathW = 8.0;  // 计算半径的被减数，用于计算分or秒圆环的半径
+
     CGPoint timerCenter = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
     CGFloat radiusWidth = rect.size.width > rect.size.height ? rect.size.height : rect.size.width;
     CGFloat radius = radiusWidth / 2 - radiusEdge;
@@ -203,6 +175,8 @@
 {
     [super layoutSubviews];
     [self.timeLabel autoCenterInSuperview];
+    CGFloat radiusWidth = self.frame.size.width > self.frame.size.height ? self.frame.size.height : self.frame.size.width;
+    self.timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:radiusWidth * 0.2];;
     
 }
 

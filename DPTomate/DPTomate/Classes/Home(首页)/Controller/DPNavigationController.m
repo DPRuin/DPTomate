@@ -26,7 +26,6 @@
     // 导航栏字体颜色
     self.navigationBar.tintColor = DPOrangeColor;
     
-    
 }
 
 /**
