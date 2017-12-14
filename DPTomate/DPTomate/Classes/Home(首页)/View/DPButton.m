@@ -19,22 +19,22 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    CGFloat cornerRadius;
+//    CGFloat cornerRadius;
+//
+//    // 判断设备是iPhone or iPad
+//    switch ([UIDevice currentDevice].userInterfaceIdiom) {
+//        case UIUserInterfaceIdiomPhone:
+//            cornerRadius = 40;
+//            break;
+//        case UIUserInterfaceIdiomPad:
+//            cornerRadius = 60;
+//            break;
+//        default:
+//            cornerRadius = 40;
+//            break;
+//    }
     
-    // 判断设备是iPhone or iPad
-    switch ([UIDevice currentDevice].userInterfaceIdiom) {
-        case UIUserInterfaceIdiomPhone:
-            cornerRadius = 35;
-            break;
-        case UIUserInterfaceIdiomPad:
-            cornerRadius = 60;
-            break;
-        default:
-            cornerRadius = 35;
-            break;
-    }
-    
-    self.layer.cornerRadius = cornerRadius;
+    self.layer.cornerRadius = 40;
     
     self.layer.borderWidth = 1;
     self.layer.borderColor = DPOrangeColor.CGColor;

@@ -128,7 +128,8 @@
     }
     
     CGPoint timerCenter = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
-    CGFloat radius = rect.size.width / 2 - radiusEdge;
+    CGFloat radiusWidth = rect.size.width > rect.size.height ? rect.size.height : rect.size.width;
+    CGFloat radius = radiusWidth / 2 - radiusEdge;
     CGFloat startAngle = M_PI_2 * 3;
     
     // 画分钟

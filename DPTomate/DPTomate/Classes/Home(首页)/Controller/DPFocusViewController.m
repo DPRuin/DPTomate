@@ -67,19 +67,15 @@
 //    }
 }
 
-//- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-//{
-//    // 屏幕旋转时space 切换 20 - 40
-//    CGFloat space = (size.width == 1024)? 20.0: -40.0;
-//    self.procrastinateTopSpace.constant = space;
-//    [self.timerView setNeedsDisplay];
-//}
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [self.timerView setNeedsDisplay];
+}
 
-//- (void)viewWillLayoutSubviews
-//{
-//
-//    [self.timerView setNeedsDisplay];
-//}
+- (void)viewWillLayoutSubviews
+{
+    [self.timerView setNeedsDisplay];
+}
 
 /**
  *  修改电量条样式
