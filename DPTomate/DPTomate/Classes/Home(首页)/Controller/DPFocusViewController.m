@@ -340,27 +340,27 @@
  */
 - (void)showAlert {
     
-    NSMutableString *alertMessage = [NSMutableString stringWithString:NSLocalizedString(@"Do you want to stop this ", nil)];
+    NSString *alertMessage = @"";
     switch (self.currentType) {
         case TimerTypeWork: // 工作
-            [alertMessage appendString:NSLocalizedString(@"work timer?", nil)];
+            alertMessage = NSLocalizedString(@"workAlertMessage", nil);
             break;
             
         case TimerTypeBreak: // 休息
-            [alertMessage appendString:NSLocalizedString(@"break timer?", nil)];
+            alertMessage = NSLocalizedString(@"breakAlertMessage", nil);
             break;
             
         case TimerTypeProcrastination: // 拖延
-            [alertMessage appendString:NSLocalizedString(@"procrastination?", nil)];
+           alertMessage = NSLocalizedString(@"procrastinationAlertMessage", nil);
             break;
         default:
             break;
     }
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Stop?", nil) message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:alertMessage message:nil preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
-    UIAlertAction *stopAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Stop", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *stopAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         // 停止倒计时
         [self startTimerWithType:TimerTypeIdle];
     }];

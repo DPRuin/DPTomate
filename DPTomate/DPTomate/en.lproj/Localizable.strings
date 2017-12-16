@@ -7,13 +7,12 @@
 */
 
 // home
-"Do you want to stop this "="Do you want to stop this ";
-"work timer?"="work timer?";
-"break timer?"="break timer?";
-"procrastination?"="procrastination?";
-"Stop?"="Stop?";
+"workAlertMessage"="Are you sure you stopped working?";
+"breakAlertMessage"="Are you sure to stop?";
+"procrastinationAlertMessage"="Do you want to stop procrastinating?";
+
 "Cancel"="Cancel";
-"Stop"="Stop";
+"OK"="OK";
 
 // 设置界面
 "Setting"="Setting";
